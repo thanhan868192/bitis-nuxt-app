@@ -6,7 +6,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     "@nuxtjs/google-fonts",
-    // "@nuxt/ui",
     '@nuxtjs/tailwindcss',
   ],
   css: [

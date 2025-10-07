@@ -1,0 +1,92 @@
+[
+  {
+    "label": "VỀ BITI'S",
+    "children": []
+  },
+  {
+    "label": "NHÃN HIỆU",
+    "children": [
+      { "label": "BITI'S HUNTER" },
+      { "label": "GOSTO" },
+      { "label": "ÊMBRACE" },
+      { "label": "HELIO BY BITIS" }
+    ]
+  },
+  {
+    "label": "NAM",
+    "children": [
+      { "label": "Hunter" },
+      { "label": "Sandal" },
+      { "label": "Giày Thể Thao" },
+      { "label": "Giày Chạy Bộ & Đi Bộ" },
+      { "label": "Giày Tây" },
+      { "label": "Dép - Hài" },
+      { "label": "Balo" },
+      { "label": "Quần Áo" }
+    ]
+  },
+  {
+    "label": "NỮ",
+    "children": [
+      { "label": "Hunter" },
+      { "label": "Sandal" },
+      { "label": "Giày Thể Thao" },
+      { "label": "Giày Chạy Bộ & Đi Bộ" },
+      { "label": "Giày Cao Gót" }
+    ]
+  },
+  {
+    "label": "TEEN NAM",
+    "children": [{ "label": "Giày Thể Thao" }, { "label": "Sandal" }]
+  },
+  {
+    "label": "TEEN Nữ",
+    "children": [{ "label": "Giày Thể Thao" }, { "label": "Sandal" }]
+  },
+  {
+    "label": "BÉ TRAI",
+    "children": [
+      { "label": "Giày Thể Thao" },
+      { "label": "Sandal" },
+      { "label": "Dép" },
+      { "label": "Giày & Sandal Tập Đi" }
+    ]
+  },
+  {
+    "label": "BÉ GÁI",
+    "children": [
+      { "label": "Giày Thể Thao" },
+      { "label": "Sandal" },
+      { "label": "Dép Bé Gái" },
+      { "label": "Giày & Sandal Tập Đi" },
+      { "label": "Dép Bé Búp Bê" }
+    ]
+  },
+  {
+    "label": "PHỤ KIỆN",
+    "children": [
+      { "label": "Balo" },
+      { "label": "Balo Trẻ Em" },
+      { "label": "Túi Trẻ Em" },
+      { "label": "Túi Người Lớn" },
+      { "label": "Ví" },
+      { "label": "Vớ Người Lớn" },
+      { "label": "Vớ Trẻ Em" },
+      { "label": "Áo Thun & Áo Khoác" },
+      { "label": "Quần Dài & Quần Short" },
+      { "label": "Nón" },
+      { "label": "Charm" },
+      { "label": "Lót Đế" },
+      { "label": "Dây Giày" },
+      { "label": "Gấu Bông" }
+    ]
+  },
+  {
+    "label": " CHIA SẺ",
+    "children": [
+      { "label": "Xu Hướng Thời Trang" },
+      { "label": "Tư Vấn Chọn Size" },
+      { "label": "Kinh Nghiệm Hay" }
+    ]
+  }
+]

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 const isOpen = ref(false)
 
 const toggleTranslate = () => {
@@ -11,7 +9,7 @@ const toggleTranslate = () => {
 
 <template>
     <div class="topbar">
-        <div class="w-full px-4 ">
+        <div class="w-full px-9">
             <div class="topbar-content flex items-center justify-between">
                 <div class="left-topbar flex flex-wrap items-center">
                     <div class="hotline-left flex gap-1">
@@ -99,6 +97,10 @@ const toggleTranslate = () => {
     background-size: contain;
     background-position: left center;
     cursor: pointer;
+}
+
+.module_translate .module_translate_mask i {
+    font-size: 8px;
 }
 
 .module_translate_main {
