@@ -1,0 +1,137 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const isOpen = ref(false)
+
+const toggleTranslate = () => {
+    isOpen.value = !isOpen.value
+}
+
+</script>
+
+<template>
+    <div class="topbar">
+        <div class="w-full px-4 ">
+            <div class="topbar-content flex items-center justify-between">
+                <div class="left-topbar flex flex-wrap items-center">
+                    <div class="hotline-left flex gap-1">
+                        <span>Hotline:</span>
+                        <span><a href="tel:0966158666">0966158666</a></span>
+                        <span>(8h – 21h30)</span>
+                    </div>
+                    <div class="aff-left">
+                        <a href="/pages/lien-he-hop-tac" data-vn="Liên hệ hợp tác"><span>Liên hệ hợp tác</span></a>
+                    </div>
+                </div>
+                <div class="right-topbar flex">
+                    <ul class="flex items-center">
+                        <li>
+                            <a href="/pages/he-thong-cua-hang" data-vn="Tìm cửa hàng"><span>Tìm cửa hàng</span></a>
+                        </li>
+                        <li>
+                            <a href="/pages/tra-cuu-tinh-trang-don-hang" data-vn="Kiểm tra đơn hàng"><span>Kiểm tra đơn
+                                    hàng</span></a>
+                        </li>
+                        <li>
+                            <div class="module_translate">
+                                <div class="module_translate_mask" @click="toggleTranslate">
+                                    <span>VN</span> <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </div>
+                                <div :class="['module_translate_main', { open: isOpen }]">
+                                    <a href="#" data-pick="">VN</a>
+                                    <a href="#" data-pick="en">EN</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://b2b.bitis.com.vn/?utm_source=trade&amp;utm_medium=b2b_header"
+                                aria-label="B2B action" target="_blank">
+                                <img style="width: 120px; height: 28px;"
+                                    src="https://file.hstatic.net/1000230642/file/b2b_161ba831bf784bd3b60d4787af503cb2.jpg"
+                                    alt="B2B action" width="120" height="28">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style>
+.topbar {
+    text-align: center;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 8px 0;
+    position: relative;
+    display: block;
+    background: #212026;
+    color: #ffffff;
+}
+
+.aff-left {
+    padding: 0 0 0 15px;
+    margin: 0 0 0 15px;
+    border-left: 1px solid #FFF;
+}
+
+.topbar .topbar-content .left-topbar .hotline-left a {
+    font-weight: 700;
+}
+
+.topbar a {
+    color: #ffffff;
+}
+
+.topbar .topbar-content .right-topbar ul li a {
+    display: block;
+}
+
+.module_translate {
+    width: 75px;
+    position: relative;
+}
+
+.module_translate_mask {
+    padding-left: 30px;
+    background: url(//theme.hstatic.net/1000230642/1001205219/14/vietnam.png?v=9208) no-repeat;
+    background-size: contain;
+    background-position: left center;
+    cursor: pointer;
+}
+
+.module_translate_main {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 5;
+    background: #fff;
+}
+
+.module_translate_main:not(.open) {
+    display: none;
+}
+
+.topbar .topbar-content .right-topbar ul li~li {
+    padding: 0 0 0 10px;
+    margin: 0 0 0 10px;
+    border-left: 1px solid #FFF;
+}
+
+.module_translate_main a {
+    display: block;
+    padding-left: 30px;
+    background: url(//theme.hstatic.net/1000230642/1001205219/14/vietnam.png?v=9208) no-repeat;
+    background-size: contain;
+    background-position: left center;
+    color: #000;
+}
+
+.module_translate_main a[data-pick="en"] {
+    background-image: url(//theme.hstatic.net/1000230642/1001205219/14/united-kingdom.png?v=9208);
+}
+</style>

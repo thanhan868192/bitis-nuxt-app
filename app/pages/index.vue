@@ -2,13 +2,11 @@
 
 <template>
     <div class="new_hunter">new hunter</div>
-    <main>
-        main
-    </main>
-    <section></section>
-    <section></section>
-    <section></section>
-    <footer></footer>
+    <BaseMain />
+    <section>section 1</section>
+    <section>section 2</section>
+    <section>section 3</section>
+    <BaseFooter />
 </template>
 
 <style scoped>
