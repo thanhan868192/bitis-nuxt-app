@@ -1,19 +1,38 @@
 <script setup lang="ts">
 import menuItems from '../../data/menu.json';
+import { onMounted, onUnmounted } from 'vue';
+
 const items = ref(menuItems);
+onMounted(() => {
+    const header = document.getElementById('main-header')
+
+    const handleScroll = () => {
+        if (window.scrollY > 40) {
+            header!.style.top = '0px'
+        } else {
+            header!.style.top = '40px'
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    onUnmounted(() => {
+        if (handleScroll) window.removeEventListener('scroll', handleScroll)
+    })
+})
+
 </script>
 
 <template>
     <div>
-        <header class="mainHeader">
-            <div class="bg-slate-500 min-h-16 flex items-center">
+        <header id="main-header" class="mainHeader w-full fixed top-10 left-0 z-[1000]">
+            <div class="bg-white min-h-16 flex items-center">
                 <div class="w-full px-4">
                     <div class="flex items-center justify-between flex-nowrap">
                         <div class="header-wrap-logo px-4">icon</div>
 
-                        <div class="header-wrap-menu flex-1 flex justify-center text-xs">
+                        <div class="header-wrap-menu flex-1 flex justify-center">
                             <nav class="navbar-mainmenu">
-                                <ul class="menuList-primary flex flex-row items-center gap-2">
+                                <ul class="menuList-primary flex flex-row items-center gap-2 text-[14px]">
                                     <li v-for="(item, index) in items" :key="index" class="has-submenu">
                                         <span>{{ item.label }}</span>
 
@@ -111,6 +130,7 @@ const items = ref(menuItems);
     display: inline-block;
     margin: 0 10px;
     position: relative;
+    color: #000000;
 }
 
 .mainHeader .header-wrap-menu ul.menuList-primary li.has-submenu .menuList-submain {
@@ -131,8 +151,9 @@ const items = ref(menuItems);
 .mainHeader .header-wrap-menu ul.menuList-primary li.has-submenu:hover>.menuList-submain {
     pointer-events: auto;
     visibility: visible;
-    top: 250%;
+    top: 200%;
     opacity: 1;
+    color: #252a2b;
 }
 
 .mainHeader .header-wrap-menu ul.menuList-submain li:not(:first-child) {

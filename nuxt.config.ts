@@ -5,18 +5,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxt/image',
-    "@nuxtjs/google-fonts",
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+    '@nuxt/ui',
   ],
   css: [
-    '@fortawesome/fontawesome-free/css/all.min.css'
+    '@fortawesome/fontawesome-free/css/all.min.css',
+    '~/assets/css/main.css'
   ],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
+
   googleFonts: {
     families: {
       Montserrat: true

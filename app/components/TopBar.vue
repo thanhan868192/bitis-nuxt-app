@@ -8,7 +8,7 @@ const toggleTranslate = () => {
 </script>
 
 <template>
-    <div class="topbar">
+    <div class="topbar fixed top-0 left-0 z-[1001]">
         <div class="w-full px-9">
             <div class="topbar-content flex items-center justify-between">
                 <div class="left-topbar flex flex-wrap items-center">

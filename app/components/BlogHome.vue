@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <div>
-
-    </div>
+    <section>
+        <div>Blog Home</div>
+    </section>
 </template>
 
 <style scoped></style>
