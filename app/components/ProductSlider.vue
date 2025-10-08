@@ -31,16 +31,18 @@ const slides = [
 <template>
     <div class="product-slider">
         <section class="relative w-full overflow-hidden">
-            <!-- <Swiper :modules="[EffectFade, Navigation, Pagination, Autoplay]" :slides-per-view="1" :loop="true"
-                :autoplay="{ delay: 4000, disableOnInteraction: false }" :effect="'fade'"
-                :fade-effect="{ crossFade: true }" :navigation="true" :pagination="{ clickable: true, }"
-                :spaceBetween="30" class="h-[450px] md:h-[550px]">
-                <SwiperSlide v-for="(slide, i) in slides" :key="i">
-                    <div class="h-full bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out"
-                        :style="{ backgroundImage: `url(${slide.image})` }">
-                    </div>
-                </SwiperSlide>
-            </Swiper> -->
+            <ClientOnly>
+                <Swiper :modules="[EffectFade, Navigation, Pagination, Autoplay]" :slides-per-view="1" :loop="true"
+                    :autoplay="{ delay: 4000, disableOnInteraction: false }" :effect="'fade'"
+                    :fade-effect="{ crossFade: true }" :navigation="true" :pagination="{ clickable: true, }"
+                    :spaceBetween="30" class="h-[450px] md:h-[550px]">
+                    <SwiperSlide v-for="(slide, i) in slides" :key="i">
+                        <div class="h-full bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out"
+                            :style="{ backgroundImage: `url(${slide.image})` }">
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
+            </ClientOnly>
         </section>
     </div>
 </template>
