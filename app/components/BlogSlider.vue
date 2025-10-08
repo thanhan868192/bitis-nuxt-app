@@ -13,24 +13,37 @@ const items = posts
 <template>
     <section class="mt-16">
         <div class="container">
-            <div class="flex items-end justify-between mb-4">
+            <div class="flex items-end justify-between mb-6">
                 <h2 class="text-2xl md:text-3xl font-bold">TIN TỨC BITIS</h2>
             </div>
 
             <ClientOnly>
-                <Swiper :modules="[Navigation, Pagination, Autoplay, A11y]" :slides-per-view="1" :space-between="16"
-                    :loop="true" :autoplay="{ delay: 4000, disableOnInteraction: false }"
-                    :pagination="{ clickable: true }" :navigation="true" :breakpoints="{
-                        640: { slidesPerView: 2, spaceBetween: 16 },
-                        1024: { slidesPerView: 3, spaceBetween: 20 },
-                        1280: { slidesPerView: 4, spaceBetween: 24 }
-                    }" class="!pb-10">
-                    <SwiperSlide v-for="post in items" :key="post.id">
-                        <BlogCard :post="post" />
+                <Swiper :modules="[Navigation, Pagination, Autoplay, A11y]" :slides-per-view="1" :space-between="24"
+                    :loop="false" :autoplay="{ delay: 4000, disableOnInteraction: false }" :navigation="true"
+                    :breakpoints="{
+                        640: { slidesPerView: 2, spaceBetween: 20 },
+                        1024: { slidesPerView: 3, spaceBetween: 24 },
+                        1280: { slidesPerView: 4, spaceBetween: 26 }
+                    }" :observer="true" :observe-parents="true" class="!pb-10">
+                    <SwiperSlide v-for="post in items" :key="post.id" class="!h-auto">
+                        <div class="h-full">
+                            <BlogCard :post="post" />
+                        </div>
                     </SwiperSlide>
                 </Swiper>
             </ClientOnly>
         </div>
     </section>
 </template>
-<style scoped></style>
+
+<style scoped>
+:deep(.swiper-slide) {
+    display: flex;
+    height: auto;
+}
+
+:deep(.swiper-slide > div) {
+    display: flex;
+    width: 100%;
+}
+</style>
