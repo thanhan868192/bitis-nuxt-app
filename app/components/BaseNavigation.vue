@@ -131,7 +131,7 @@ const items = ref(menuItems);
 .mainHeader .header-wrap-menu ul.menuList-primary li.has-submenu:hover>.menuList-submain {
     pointer-events: auto;
     visibility: visible;
-    top: 184%;
+    top: 250%;
     opacity: 1;
 }
 
