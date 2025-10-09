@@ -18,6 +18,7 @@ const regions = [
     { value: 'DN', label: 'Đà Nẵng' },
     { value: 'KHAC', label: 'Khu vực khác' },
 ] as const
+
 type RegionValue = typeof regions[number]['value']
 const region = ref<RegionValue>('ALL')
 

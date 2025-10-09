@@ -36,9 +36,10 @@ const slides = [
                     :fade-effect="{ crossFade: true }" :navigation="false" :pagination="{ clickable: true, }"
                     :spaceBetween="30" class="h-[450px] md:h-[550px]">
                     <SwiperSlide v-for="(slide, i) in slides" :key="i">
-                        <NuxtImg :src="slide.image" alt="Slide image"
+                        <NuxtImg :src="slide.image" :fetchpriority="i === 0 ? 'high' : 'auto'"
+                            :loading="i === 0 ? 'eager' : 'lazy'" decoding="async" alt="Slide image"
                             class="h-full w-full object-cover transition-opacity duration-[1500ms] ease-in-out"
-                            format="webp" quality="100" preload sizes="100vw sm:100vw" placeholder loading="lazy" />
+                            format="webp" quality="100" preload sizes="100vw sm:100vw" placeholder />
                     </SwiperSlide>
                 </Swiper>
             </ClientOnly>

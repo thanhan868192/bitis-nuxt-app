@@ -1,20 +1,21 @@
 <script setup lang="ts">
-import data from '../../data/product.json';
+import dummyData from '../../data/product.json';
+import type { Category } from '../../types/product'
 
-const datas = ref(data);
+const categories = ref(dummyData as Category[]);
 </script>
 
 <template>
-    <section v-for="(data, i) in datas" :key="i" class="mt-16">
+    <section v-for="(category, i) in categories" :key="i" class="mt-16">
         <div class="container mx-auto px-4">
-            <div class="sectionHeading-tab-new">
-                {{ data.category }}
+            <div class="section-heading-tab-new">
+                {{ category.categoryName }}
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-15">
-                <ProductCard v-for="(product, pIndex) in data.products" :key="pIndex" :product="product" />
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-[15px]">
+                <ProductCard v-for="(product, pIndex) in category.products" :key="pIndex" :product="product" />
 
             </div>
-            <div v-if="i !== datas.length - 1" class="view-more-collection flex justify-center items-center mt-11">
+            <div v-if="i !== categories.length - 1" class="view-more-collection flex justify-center items-center mt-11">
                 <a href="#">CÒN NHIỀU LẮM, XEM THÊM</a>
             </div>
         </div>
@@ -22,7 +23,7 @@ const datas = ref(data);
 </template>
 
 <style scoped>
-.sectionHeading-tab-new {
+.section-heading-tab-new {
     text-shadow: 0 0.1em 20px #ff0000, 0.05em -0.03em 0 #ff0000, 0.05em 0.005em 0 #ff0000, 0em 0.08em 0 #ff0000, 0.05em 0.08em 0 #ff0000, 0px -0.03em 0 #ff0000, -0.03em -0.03em 0 #ff0000, -0.03em 0.08em 0 #ff0000, -0.03em 0 0 #ff0000;
     color: #ff0000 !important;
     line-height: 2.2rem;

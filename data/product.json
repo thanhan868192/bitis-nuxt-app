@@ -1,6 +1,6 @@
 [
   {
-    "category": "QUÀ TẶNG PHÁI ĐẸP",
+    "categoryName": "QUÀ TẶNG PHÁI ĐẸP",
     "products": [
       {
         "image": "/images/hsw002800kem__2__bc38e7de44b3451a98348058e0471663_a7d7cb258e594eae992c32ef55e0f832_large.jpg",
@@ -85,7 +85,7 @@
     ]
   },
   {
-    "category": "SẢN PHẨM MỚI",
+    "categoryName": "SẢN PHẨM MỚI",
     "products": [
       {
         "image": "/images/hsw002800kem__2__bc38e7de44b3451a98348058e0471663_a7d7cb258e594eae992c32ef55e0f832_large.jpg",
@@ -170,7 +170,7 @@
     ]
   },
   {
-    "category": "SẢN PHẨM NỔI BẬT",
+    "categoryName": "SẢN PHẨM NỔI BẬT",
     "products": [
       {
         "image": "/images/hsw002800kem__2__bc38e7de44b3451a98348058e0471663_a7d7cb258e594eae992c32ef55e0f832_large.jpg",
