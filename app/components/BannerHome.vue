@@ -4,20 +4,20 @@
 
 <template>
     <section class="pt-16 items-center">
-        <a class="bannerEffect">
+        <a class="banner-effect">
             <NuxtImg src="/images/banner_stitch_.jpg" class="w-full h-3/4 object-cover" alt="" loading="lazy" />
         </a>
     </section>
 </template>
 
 <style scoped>
-.bannerEffect {
+.banner-effect {
     position: relative;
     display: block;
     overflow: hidden;
 }
 
-.bannerEffect::after {
+.banner-effect::after {
     content: "";
     position: absolute;
     inset: -40%;
@@ -30,16 +30,16 @@
     transition: transform 2000ms cubic-bezier(.2, .8, .2, 1);
 }
 
-.bannerEffect img {
+.banner-effect img {
     transition: transform 700ms cubic-bezier(.2, .8, .2, 1);
     transform-origin: center center;
 }
 
-.bannerEffect:hover img {
+.banner-effect:hover img {
     transform: scale(1.06);
 }
 
-.bannerEffect:hover::after {
+.banner-effect:hover::after {
     transform: translateX(120%) rotate(8deg);
 }
 </style>

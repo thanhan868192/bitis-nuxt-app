@@ -8,9 +8,9 @@ defineProps<{ product: Product }>()
     <div
         class="group relative bg-white border border-gray-300 shadow-sm overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300">
         <div class="relative w-full overflow-hidden">
-            <NuxtImg :src="product.image" alt="Product"
+            <NuxtImg :src="product.image" alt="Product" loading="lazy"
                 class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
-            <NuxtImg :src="product.hoverImage" alt="Product hover"
+            <NuxtImg :src="product.hoverImage" alt="Product hover" loading="lazy"
                 class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
             <span v-if="product.isNew"

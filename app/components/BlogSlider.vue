@@ -9,7 +9,6 @@ import 'swiper/css/navigation'
 const items = posts
 </script>
 
-
 <template>
     <section class="mt-16">
         <div class="container">
