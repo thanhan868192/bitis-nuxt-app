@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { posts } from '../../types/blog-post.type'
+import { posts } from '../../types/blog-post'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules'
 import 'swiper/css'
@@ -16,7 +16,6 @@ const items = posts
             <div class="flex items-end justify-between mb-6">
                 <h2 class="text-2xl md:text-3xl font-bold">TIN TỨC BITIS</h2>
             </div>
-
             <ClientOnly>
                 <Swiper :modules="[Navigation, Pagination, Autoplay, A11y]" :slides-per-view="1" :space-between="24"
                     :loop="false" :autoplay="{ delay: 4000, disableOnInteraction: false }" :navigation="true"

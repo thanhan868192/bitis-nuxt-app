@@ -18,16 +18,16 @@ const toggleTranslate = () => {
                         <span>(8h – 21h30)</span>
                     </div>
                     <div class="aff-left">
-                        <a href="/pages/lien-he-hop-tac" data-vn="Liên hệ hợp tác"><span>Liên hệ hợp tác</span></a>
+                        <a href="#" data-vn="Liên hệ hợp tác"><span>Liên hệ hợp tác</span></a>
                     </div>
                 </div>
                 <div class="right-topbar flex">
                     <ul class="flex items-center">
                         <li>
-                            <a href="/pages/he-thong-cua-hang" data-vn="Tìm cửa hàng"><span>Tìm cửa hàng</span></a>
+                            <a href="#" data-vn="Tìm cửa hàng"><span>Tìm cửa hàng</span></a>
                         </li>
                         <li>
-                            <a href="/pages/tra-cuu-tinh-trang-don-hang" data-vn="Kiểm tra đơn hàng"><span>Kiểm tra đơn
+                            <a href="#" data-vn="Kiểm tra đơn hàng"><span>Kiểm tra đơn
                                     hàng</span></a>
                         </li>
                         <li>
@@ -42,8 +42,7 @@ const toggleTranslate = () => {
                             </div>
                         </li>
                         <li>
-                            <a href="https://b2b.bitis.com.vn/?utm_source=trade&amp;utm_medium=b2b_header"
-                                aria-label="B2B action" target="_blank">
+                            <a href="#" aria-label="B2B action" target="_blank">
                                 <img style="width: 120px; height: 28px;"
                                     src="https://file.hstatic.net/1000230642/file/b2b_161ba831bf784bd3b60d4787af503cb2.jpg"
                                     alt="B2B action" width="120" height="28">
@@ -93,7 +92,7 @@ const toggleTranslate = () => {
 
 .module_translate_mask {
     padding-left: 30px;
-    background: url(//theme.hstatic.net/1000230642/1001205219/14/vietnam.png?v=9208) no-repeat;
+    background: url('/images/vietnam.png') no-repeat;
     background-size: contain;
     background-position: left center;
     cursor: pointer;
@@ -127,13 +126,13 @@ const toggleTranslate = () => {
 .module_translate_main a {
     display: block;
     padding-left: 30px;
-    background: url(//theme.hstatic.net/1000230642/1001205219/14/vietnam.png?v=9208) no-repeat;
+    background: url('/images/vietnam.png') no-repeat;
     background-size: contain;
     background-position: left center;
     color: #000;
 }
 
 .module_translate_main a[data-pick="en"] {
-    background-image: url(//theme.hstatic.net/1000230642/1001205219/14/united-kingdom.png?v=9208);
+    background-image: url('/images/united-kingdom.png');
 }
 </style>

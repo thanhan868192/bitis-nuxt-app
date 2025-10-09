@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     '@nuxt/image',
     '@nuxtjs/google-fonts',
@@ -12,10 +12,18 @@ export default defineNuxtConfig({
     '@fortawesome/fontawesome-free/css/all.min.css',
     '~/assets/css/main.css'
   ],
-
+  image: {
+    formats: ['webp', 'avif'],
+    densities: [1, 2],
+    screens: { sm: 640, md: 768, lg: 1024, xl: 1280, '2xl': 1536 }
+  },
   googleFonts: {
     families: {
       Montserrat: true
     },
+  },
+  vite: {
+    server: { hmr: false },
+    optimizeDeps: { include: ['swiper', 'swiper/vue'] }
   },
 })

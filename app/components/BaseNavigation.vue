@@ -52,8 +52,8 @@ onMounted(() => {
                         <div class="header-wrap-action px-4">
                             <div class="header-action flex gap-6">
                                 <div class="header-action-item"></div>
-                                <div class="header-action-item header-action_account">
-                                    <div class="header-action_text">
+                                <div class="header-action-item header-action-account">
+                                    <div class="header-action-text">
                                         <span class="box-icon">
                                             <svg class="svg-ico-account" xmlns="http://www.w3.org/2000/svg"
                                                 version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -89,8 +89,8 @@ onMounted(() => {
                                     </div>
                                 </div>
                                 <div class="header-action-item">
-                                    <div class="header-action-item header-action_cart">
-                                        <div class="header-action_text">
+                                    <div class="header-action-item header-action-cart">
+                                        <div class="header-action-text">
                                             <span class="box-icon">
                                                 <svg class="svg-ico-cart" xmlns="http://www.w3.org/2000/svg"
                                                     version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -182,17 +182,17 @@ onMounted(() => {
     transform: rotate(180deg);
 }
 
-.mainHeader .header-wrap-action .header-action .header-action-item .header-action_text {
+.mainHeader .header-wrap-action .header-action .header-action-item .header-action-text {
     position: relative;
     height: 100%;
 }
 
-.mainHeader .header-wrap-action .header-action .header-action-item .header-action_text .box-icon svg.svg-ico-account {
+.mainHeader .header-wrap-action .header-action .header-action-item .header-action-text .box-icon svg.svg-ico-account {
     width: 22px;
     height: 40px;
 }
 
-.mainHeader .header-wrap-action .header-action .header-action-item .header-action_text .box-icon svg.svg-ico-cart {
+.mainHeader .header-wrap-action .header-action .header-action-item .header-action-text .box-icon svg.svg-ico-cart {
     width: 22px;
     height: 40px;
 }

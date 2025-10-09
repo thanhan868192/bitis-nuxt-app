@@ -5,7 +5,7 @@
 <template>
     <section class="pt-16 items-center">
         <a class="bannerEffect">
-            <img src="/images/banner_stitch_.jpg" class="w-full h-3/4 object-cover" alt="">
+            <NuxtImg src="/images/banner_stitch_.jpg" class="w-full h-3/4 object-cover" alt="" loading="lazy" />
         </a>
     </section>
 </template>
