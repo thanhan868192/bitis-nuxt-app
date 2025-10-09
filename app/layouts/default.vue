@@ -19,7 +19,7 @@ useHead({
 <template>
     <div>
         <TopBar />
-        <BaseNavigation />
+        <Navigation />
         <slot />
     </div>
 </template>
