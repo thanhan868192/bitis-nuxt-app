@@ -12,7 +12,7 @@
     <StoreHome />
     <NewsLetter />
     <Gallery />
-    <BaseFooter />
+    <Footer />
 </template>
 
 <style scoped></style>

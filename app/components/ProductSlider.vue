@@ -28,7 +28,7 @@ const slides = [
 </script>
 
 <template>
-    <section class="relative w-full overflow-hidden">
+    <section class="product-slider relative w-full overflow-hidden">
         <ClientOnly>
             <Swiper :modules="[EffectFade, Pagination, Autoplay]" :slides-per-view="1" :loop="true"
                 :autoplay="{ delay: 4000, disableOnInteraction: false }" :effect="'fade'"

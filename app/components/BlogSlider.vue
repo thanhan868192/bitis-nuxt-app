@@ -10,7 +10,7 @@ const items = posts
 </script>
 
 <template>
-    <section class="mt-16">
+    <section class="blog-slider mt-16">
         <div class="container">
             <div class="flex items-end justify-between mb-6">
                 <h2 class="text-2xl md:text-3xl font-bold">TIN TỨC BITIS</h2>

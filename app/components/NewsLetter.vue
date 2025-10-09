@@ -4,8 +4,8 @@
     <section class="news-letter">
         <div class="container mx-auto px-4">
             <div class="wrapbox-news-letter">
-                <div class="flex flex-wrap items-center">
-                    <div class="news-letter-title">
+                <div class="flex flex-col md:flex-row md:items-center md:flex-wrap">
+                    <div class="news-letter-title w-full md:w-1/2 md:text-right text-center md:pr-4 px-0">
                         <h3 class="tiltle">
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
@@ -67,7 +67,20 @@
                             Để nhận các thông tin mới từ Biti's cũng như các chương trình khuyến mãi hấp dẫn
                         </p>
                     </div>
-                    <div class="news-letter-content"></div>
+                    <div class="news-letter-content w-full md:w-1/2 md:pl-4 px-0">
+                        <form class="contact-form" action="">
+                            <div class="input-group lg:w-8/12 flex items-center justify-between">
+                                <input type="hidden" id="news-letter-tags" name="contact[tags]"
+                                    value="Đăng kí nhận tin">
+                                <input required type="email" name="contact[email]" class="news-letter-input"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                    placeholder="Vui lòng nhập email của bạn..." aria-label="Email Address">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="button news-letter-btn">Đăng ký</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,10 +88,70 @@
 </template>
 
 <style scoped>
-.news-letter-title {
-    text-align: right;
-    width: 50%;
-    padding: 0 15px 0 0;
+.news-letter-content .contact-form .input-group input:not([type="checkbox"]) {
+    color: #5c5c5c;
+    height: 45px;
+    width: 100%;
+    font-weight: 500;
+    padding: 8px 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px !important;
+    box-shadow: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.news-letter-content .button {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    overflow: hidden;
+    padding: 12px 28px;
+    line-height: normal;
+    color: #fff;
+    background-color: var(--shop-color-hover);
+    border: 1px solid var(--shop-color-button);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    outline: none !important;
+}
+
+.news-letter-content .news-letter-btn {
+    background: #1b4ea0;
+    height: 40px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-right: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 35px;
+    padding-right: 35px;
+    white-space: nowrap;
+    border: none;
+}
+
+.news-letter-content .news-letter-input {
+    height: 45px;
+    line-height: 27px;
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.news-letter-content .contact-form .input-group {
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+    background: white;
+    border-radius: 4px;
 }
 
 .tiltle svg {

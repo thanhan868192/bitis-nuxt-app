@@ -6,14 +6,13 @@ const categories = ref(dummyData as Category[]);
 </script>
 
 <template>
-    <section v-for="(category, i) in categories" :key="i" class="mt-16">
-        <div class="container mx-auto px-4">
+    <section v-for="(category, i) in categories" :key="i" class="product-list mt-16">
+        <div class="container mx-auto px-4 lg-padding">
             <div class="section-heading-tab-new">
                 {{ category.categoryName }}
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-[15px]">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 lg:px-[15px]">
                 <ProductCard v-for="(product, pIndex) in category.products" :key="pIndex" :product="product" />
-
             </div>
             <div v-if="i !== categories.length - 1" class="view-more-collection flex justify-center items-center mt-11">
                 <a href="#">CÒN NHIỀU LẮM, XEM THÊM</a>
