@@ -135,4 +135,10 @@ const toggleTranslate = () => {
 .module_translate_main a[data-pick="en"] {
     background-image: url('/images/united-kingdom.png');
 }
+
+@media (max-width: 991px) {
+    .topbar {
+        display: none;
+    }
+}
 </style>

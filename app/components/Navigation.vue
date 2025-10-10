@@ -29,7 +29,7 @@ onMounted(() => {
                 <div class="w-full px-4">
                     <div class="flex items-center justify-between flex-nowrap">
                         <div class="header-wrap-logo px-4">
-                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408.11 257.56">
+                            <!-- <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408.11 257.56">
                                 <path class="cls-1"
                                     d="M304.54,7.18l7.67-2.69c17.18-6,37.4-5.91,54.63-.14,14,4.67,29.93,14.84,31.35,31l.25,2.73-22,28,0,.11L364.71,81a23.66,23.66,0,1,1,14.92,44.81C400,151,391,195.13,347.76,201.8l-.52.08H288.3V150.7h19c-.86-.59-1.7-1.21-2.54-1.87l-.13-.1-.12-.11c-8.17-7.07-13.18-15.24-15.17-24.46-1.34,1.76-2.72,3.45-4.11,5l-2.07,2.39H270.94v70.37H193.6a42.82,42.82,0,0,1-36.92-25.43v25.44h-52V177.3a58.49,58.49,0,0,1-6.38,9l-.13.15-.14.15a52.59,52.59,0,0,1-56,12.89c-18.52-6.88-30-23-32.22-42.44l0-.39v-87l52.56,0,.12,31.07A51.29,51.29,0,0,1,104,125c.23.36.45.72.66,1.09V104.46h3.18A35.64,35.64,0,0,1,93.65,76.39l-.07-7h59.18v-.3h49.32a42,42,0,0,1,25.34-37l-16.83,1.82L252,15.78a104.61,104.61,0,0,1,52.5-8.6M204.79,85.4V98h7.62a42,42,0,0,1-7.62-12.63m63.46,19.05h1.54l.07-1.22q-.79.63-1.6,1.22M275.33,98h15.34l.06-.32,43.69.13c1-44.3-35.75-73.46-78.88-68.79l-3.81.41A41.81,41.81,0,0,1,275.33,98m-124.61,6.46h2V102.8q-1,.86-2,1.65m68.18,46.24v-9.48H204.79v9a1,1,0,0,0,.36.53Zm131.86-41.45a23.58,23.58,0,0,1-.84-6.27c0-.07,0-.14,0-.21l-5,5.29a18.8,18.8,0,0,0,3.12.78q1.37.18,2.7.42">
                                 </path>
@@ -125,10 +125,10 @@ onMounted(() => {
                                     d="M408.11,232.44h-3.16v12.75a1.31,1.31,0,0,0,.72,1.31,3.09,3.09,0,0,0,1.24.19h1.2v2.63l-2.48.3a3.8,3.8,0,0,1-3.23-1.24,5,5,0,0,1-.75-3v-12.9h-2.7v-2.77h2.7v-5.48h3.3v5.48h3.16Z">
                                 </path>
                                 <rect class="cls-6" width="408.11" height="257.56"></rect>
-                            </svg>
+                            </svg> -->
                         </div>
 
-                        <div class="header-wrap-menu flex-1 flex justify-center">
+                        <div class="header-wrap-menu flex-1 hidden lg:flex justify-center">
                             <nav class="navbar-mainmenu">
                                 <ul class="menuList-primary flex flex-row items-center gap-2 text-[14px]">
                                     <li v-for="(item, index) in items" :key="index" class="has-submenu">
@@ -153,7 +153,7 @@ onMounted(() => {
                                 <div class="header-action-item header-action-account">
                                     <div class="header-action-text">
                                         <span class="box-icon">
-                                            <svg class="svg-ico-account" xmlns="http://www.w3.org/2000/svg"
+                                            <!-- <svg class="svg-ico-account" xmlns="http://www.w3.org/2000/svg"
                                                 version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
                                                 xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0"
                                                 y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512"
@@ -182,7 +182,7 @@ onMounted(() => {
                                                     <g xmlns="http://www.w3.org/2000/svg"></g>
                                                     <g xmlns="http://www.w3.org/2000/svg"></g>
                                                 </g>
-                                            </svg>
+                                            </svg> -->
                                         </span>
                                     </div>
                                 </div>
@@ -190,7 +190,7 @@ onMounted(() => {
                                     <div class="header-action-item header-action-cart">
                                         <div class="header-action-text">
                                             <span class="box-icon">
-                                                <svg class="svg-ico-cart" xmlns="http://www.w3.org/2000/svg"
+                                                <!-- <svg class="svg-ico-cart" xmlns="http://www.w3.org/2000/svg"
                                                     version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
                                                     xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0"
                                                     y="0" viewBox="0 0 32 32" style="enable-background:new 0 0 512 512"
@@ -209,7 +209,7 @@ onMounted(() => {
                                                                 fill="#000000" data-original="#000000" class=""></path>
                                                         </g>
                                                     </g>
-                                                </svg>
+                                                </svg> -->
                                             </span>
                                         </div>
                                     </div>
