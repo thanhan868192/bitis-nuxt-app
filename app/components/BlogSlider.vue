@@ -1,47 +1,52 @@
 <script setup lang="ts">
-import { posts } from '../../types/blog-post'
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules'
 import 'swiper/css'
-import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import { A11y, Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import type { BlogPost } from '../../types/blog-post'
+import data from '../../data/blogs.json'
+const posts = ref(data as BlogPost[]);
 
-const items = posts
+const modules = [Navigation, A11y]
+const breakpoints = {
+    0: { slidesPerView: 1, spaceBetween: 16 },
+    640: { slidesPerView: 2, spaceBetween: 20 },
+    1024: { slidesPerView: 3, spaceBetween: 24 },
+    1280: { slidesPerView: 4, spaceBetween: 26 }
+}
 </script>
 
 <template>
-    <section class="blog-slider mt-16">
-        <div class="container">
-            <div class="flex items-end justify-between mb-6">
-                <h2 class="text-2xl md:text-3xl font-bold">TIN TỨC BITIS</h2>
-            </div>
-            <ClientOnly>
-                <Swiper :modules="[Navigation, Pagination, Autoplay, A11y]" :slides-per-view="1" :space-between="24"
-                    :loop="false" :autoplay="{ delay: 4000, disableOnInteraction: false }" :navigation="true"
-                    :breakpoints="{
-                        640: { slidesPerView: 2, spaceBetween: 20 },
-                        1024: { slidesPerView: 3, spaceBetween: 24 },
-                        1280: { slidesPerView: 4, spaceBetween: 26 }
-                    }" :observer="true" :observe-parents="true" class="!pb-10">
-                    <SwiperSlide v-for="post in items" :key="post.id" class="!h-auto">
-                        <div class="h-full">
-                            <BlogCard :post="post" />
-                        </div>
+    <ClientOnly>
+        <section class="blog-slider relative pt-16">
+            <div class="container mx-auto px-4">
+                <header class="flex items-center justify-between mb-4 pb-1 border-b border-gray-200">
+                    <h3 class="text-black font-medium text-[18px]">Tin tức &amp; Sự kiện</h3>
+                </header>
+                <Swiper :modules="modules" :breakpoints="breakpoints" :loop="false" :navigation="true" :observer="true"
+                    :observe-parents="true" class="!pb-10">
+                    <SwiperSlide v-for="p in posts" :key="p.id">
+                        <BlogCard :post="p" />
                     </SwiperSlide>
                 </Swiper>
-            </ClientOnly>
-        </div>
-    </section>
+            </div>
+        </section>
+    </ClientOnly>
 </template>
 
 <style scoped>
-:deep(.swiper-slide) {
-    display: flex;
-    height: auto;
+:deep(.swiper-button-prev) {
+    margin-left: 15px;
 }
 
-:deep(.swiper-slide > div) {
-    display: flex;
-    width: 100%;
+:deep(.swiper-button-next) {
+    margin-right: 15px;
+}
+
+:deep(.swiper-button-prev),
+:deep(.swiper-button-next) {
+    color: black;
+    width: 20px;
+    height: 20px;
 }
 </style>

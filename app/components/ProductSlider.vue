@@ -4,7 +4,6 @@ import { EffectFade, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/pagination'
-
 const slides = [
     {
         image: '/images/1920x750__3__7dd4671de2a4436bb84c7f25b0bda4f9.jpg',
@@ -25,15 +24,15 @@ const slides = [
         image: '/images/1920x750__4__1ef2b72b0e6c4a0da8fe711571c6309b.jpg',
     },
 ]
+const modules = [EffectFade, Pagination, Autoplay]
 </script>
 
 <template>
     <section class="product-slider relative w-full overflow-hidden">
         <ClientOnly>
-            <Swiper :modules="[EffectFade, Pagination, Autoplay]" :slides-per-view="1" :loop="true"
+            <Swiper :modules="modules" :slides-per-view="1" :spaceBetween="30" :loop="true"
                 :autoplay="{ delay: 4000, disableOnInteraction: false }" :effect="'fade'"
-                :fade-effect="{ crossFade: true }" :navigation="false" :pagination="{ clickable: true, }"
-                :spaceBetween="30" class="h-[750px] md:h-[850px]">
+                :fade-effect="{ crossFade: true }" :pagination="{ clickable: true, }" class="h-[750px] md:h-[850px]">
                 <SwiperSlide v-for="(slide, i) in slides" :key="i">
                     <NuxtImg :src="slide.image" :fetchpriority="i === 0 ? 'high' : 'auto'"
                         :loading="i === 0 ? 'eager' : 'lazy'" decoding="async" alt="Slide image"

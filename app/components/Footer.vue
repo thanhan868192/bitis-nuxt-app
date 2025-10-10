@@ -4,14 +4,13 @@
 <template>
     <footer class="bg-white leading-6">
         <div class="footer-container">
-            <div></div>
-            <div class="footer-expand-collapsed pt-10">
+            <div class="footer-main-content pt-10">
                 <div class="container mx-auto lg-padding flex ">
                     <div class="w-full lg:w-8/12 mx-3.5">
                         <div class="grid grid-cols-1 lg:grid-cols-3">
-                            <div>
-                                <h4 class="mb-4 text-lg font-semibold text-gray-900">Về Biti's</h4>
-                                <div>
+                            <div class="footer-widget">
+                                <h4 class="title-footer mb-4 text-lg font-semibold text-gray-900">Về Biti's</h4>
+                                <div class="footer-content">
                                     <ul class="space-y-2 text-gray-700">
                                         <li><a class="hover:text-blue-700 " href="#">Câu chuyện Biti's</a>
                                         </li>
@@ -23,9 +22,9 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div>
-                                <h4 class="mb-4 text-lg font-semibold text-gray-900">Về Biti's</h4>
-                                <div>
+                            <div class="footer-widget">
+                                <h4 class="title-footer mb-4 text-lg font-semibold text-gray-900">Về Biti's</h4>
+                                <div class="footer-content">
                                     <ul class="space-y-2 text-gray-700">
                                         <li><a class="hover:text-blue-700 " href="#">Câu chuyện Biti's</a>
                                         </li>
@@ -44,9 +43,9 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div>
-                                <h4 class="mb-4 text-lg font-semibold text-gray-900">Về Biti's</h4>
-                                <div>
+                            <div class="footer-widget">
+                                <h4 class="title-footer mb-4 text-lg font-semibold text-gray-900">Về Biti's</h4>
+                                <div class="footer-content">
                                     <ul class="space-y-2 text-gray-700">
                                         <li><a class="hover:text-blue-700 " href="#">Câu chuyện Biti's</a>
                                         </li>

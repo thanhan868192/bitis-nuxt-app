@@ -32,7 +32,7 @@ defineProps<{ product: Product }>()
             <div class="mt-2 flex justify-between">
                 <div class="flex space-x-2  items-center ">
                     <p class="text-red-600 font-bold">{{ product.price.toLocaleString() }} ₫</p>
-                    <p v-if="product.oldPrice" class="text-gray-400 line-through text-sm">
+                    <p v-if="product.oldPrice" class="text-gray-900 line-through text-sm">
                         {{ product.oldPrice.toLocaleString() }} ₫
                     </p>
                     <p v-if="product.discount" class="discount text-xs font-medium">
