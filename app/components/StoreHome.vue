@@ -29,7 +29,7 @@
 .store-home {
     margin-top: 20px;
     padding: 90px 0 30px 0;
-    background: url('/images/bg_banner_center_e500361972e84b9c8cb5aa4950919c46.avif');
+    background: url('/images/bg_banner_center_e500361972e84b9c8cb5aa4950919c46.jpg');
     background-position: center top;
 }
 </style>

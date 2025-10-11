@@ -10,7 +10,7 @@ useHead({
     link: [
         {
             rel: "shortcut icon",
-            href: "/images/favicon-new.avif",
+            href: "/images/favicon-new.png",
         },
     ],
 })

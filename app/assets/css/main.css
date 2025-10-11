@@ -46,7 +46,7 @@ body {
 
 .module_translate_mask {
   padding-left: 30px;
-  background: url("/images/vietnam.avif") no-repeat;
+  background: url("/images/vietnam.png") no-repeat;
   background-size: contain;
   background-position: left center;
   cursor: pointer;
@@ -74,12 +74,12 @@ body {
 .module_translate_main a {
   display: block;
   padding-left: 30px;
-  background: url("/images/vietnam.avif") no-repeat;
+  background: url("/images/vietnam.png") no-repeat;
   background-size: contain;
   background-position: left center;
   color: #000;
 }
 
 .module_translate_main a[data-pick="en"] {
-  background-image: url("/images/united-kingdom.avif");
+  background-image: url("/images/united-kingdom.png");
 }
