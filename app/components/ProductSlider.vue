@@ -15,8 +15,8 @@ const { productSliders, modules } = useProduct()
             <SwiperSlide v-for="(slide, i) in productSliders" :key="i">
                 <NuxtImg :src="slide.image" :loading="i === 0 ? 'eager' : 'lazy'" :alt="slide.alt" :preload="i === 0"
                     :fetchpriority="i === 0 ? 'high' : 'low'" decoding="async" width="1920" height="750"
-                    class="h-full w-full object-cover transition-opacity duration-[1500ms] ease-in-out" format="webp"
-                    quality="65" sizes="100vw sm:100vw" placeholder />
+                    class="h-full w-full object-cover transition-opacity duration-[1500ms] ease-in-out" quality="65"
+                    sizes="100vw sm:100vw" format="webp" placeholder />
             </SwiperSlide>
         </Swiper>
     </section>

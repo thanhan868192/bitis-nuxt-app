@@ -40,7 +40,7 @@ const { isOpen, toggleTranslate } = useHeader();
                         <li>
                             <a href="#" aria-label="B2B action" target="_blank">
                                 <NuxtImg style="width: 120px; height: 28px; border-radius: 40px;"
-                                    src="/images/b2b_161ba831bf784bd3b60d4787af503cb2.jpg" loading="lazy"
+                                    src="/images/b2b_161ba831bf784bd3b60d4787af503cb2.avif" loading="lazy"
                                     decoding="async" alt="B2B action" width="120" height="28" />
                             </a>
                         </li>

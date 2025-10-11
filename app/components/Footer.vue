@@ -479,7 +479,7 @@ function onToggle(key: ExpandKey) {
                                     <a href="#" target="_blank" rel="noreferrer">
                                         <NuxtImg width="120" height="45" alt="Bộ Công Thương" loading="lazy"
                                             decoding="async"
-                                            src="/images/bocongthuong_f866573d7d9d4e7fb16d09817459d3cb_medium.png" />
+                                            src="/images/bocongthuong_f866573d7d9d4e7fb16d09817459d3cb_medium.avif" />
                                     </a>
                                 </div>
                                 <div class="footer-bottom-right block font-semibold text-gray-900 lg:col-span-6">

@@ -15,7 +15,7 @@
                     </div>
                     <div class="lg:col-span-2">
                         <NuxtImg
-                            src="/images/map_biti_s_1024x1024_e7451fce602__1__dd3c94b0314e4ecbabbb0198510b97d3_1024x1024.jpg"
+                            src="/images/map_biti_s_1024x1024_e7451fce602__1__dd3c94b0314e4ecbabbb0198510b97d3_1024x1024.avif"
                             width="1024" height="758" class="w-full h-full max-w-full object-cover"
                             alt="Map map_biti_s_1024x1024_e7451fce602__1__dd3c94b0314e4ecbabbb0198510b97d3_1024x1024" />
                     </div>
@@ -29,7 +29,7 @@
 .store-home {
     margin-top: 20px;
     padding: 90px 0 30px 0;
-    background: url('/images/bg_banner_center_e500361972e84b9c8cb5aa4950919c46.jpg');
+    background: url('/images/bg_banner_center_e500361972e84b9c8cb5aa4950919c46.avif');
     background-position: center top;
 }
 </style>
