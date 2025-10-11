@@ -12,15 +12,15 @@
             <div class="max-w-[1400px] mx-auto px-6">
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <a class="banner-effect">
-                        <NuxtImg src="/images/banner_giaytennis.avif" width="1024" height="576"
+                        <NuxtImg src="/images/banner_giaytennis.jpg" width="1024" height="576"
                             class="w-full h-56 md:h-64 object-cover" alt="Giày tennis" />
                     </a>
                     <a class="banner-effect">
-                        <NuxtImg src="/images/banner_giaytay.avif" width="1024" height="576"
+                        <NuxtImg src="/images/banner_giaytay.jpg" width="1024" height="576"
                             class="w-full h-56 md:h-64 object-cover" alt="Giày tây" />
                     </a>
                     <a class="banner-effect">
-                        <NuxtImg src="/images/banner_gauchuatam_510x275.avif" width="1024" height="552"
+                        <NuxtImg src="/images/banner_gauchuatam_510x275.jpg" width="1024" height="552"
                             class="w-full h-56 md:h-64 object-cover" alt="Gấu chữa tâm" />
                     </a>
                 </div>
@@ -32,7 +32,7 @@
 <style scoped>
 .main-banner-home {
     padding: 50px 0 30px 0;
-    background: url('/images/bg_banner_center_e500361972e84b9c8cb5aa4950919c46.avif');
+    background: url('/images/bg_banner_center_e500361972e84b9c8cb5aa4950919c46.jpg');
     background-position: center top;
 }
 
