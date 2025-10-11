@@ -2,6 +2,7 @@
 import type { Product } from '../../types/product'
 
 defineProps<{ product: Product, i: number }>()
+const VNDUnit = new Intl.NumberFormat('vi-VN')
 </script>
 
 <template>
@@ -10,10 +11,10 @@ defineProps<{ product: Product, i: number }>()
         <div class="relative aspect-[4/5] overflow-hidden">
             <NuxtImg :src="product.image" alt="Product" width="600" height="750" format="webp" quality="65"
                 :loading="i === 0 ? 'eager' : 'lazy'" :preload="i === 0" :fetchpriority="i === 0 ? 'high' : 'low'"
-                decoding="async"
+                decoding="async" placeholder
                 class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
             <NuxtImg :src="product.hoverImage" alt="Product hover" width="600" height="750" format="webp" quality="65"
-                loading="lazy" decoding="async"
+                loading="lazy" decoding="async" placeholder
                 class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
             <span v-if="product.isNew"
@@ -28,22 +29,22 @@ defineProps<{ product: Product, i: number }>()
                 <p class="text-sm font-semibold text-gray-900">{{ product.colors }} Màu sắc</p>
             </div>
 
-            <h3 class="text-sm font-semibold text-gray-900 mt-1">
+            <h3 class="text-sm font-semibold text-gray-900 mt-1 line-clamp-2 leading-snug min-h-[3.25rem]">
                 {{ product.title }}
             </h3>
 
             <div class="mt-2 flex justify-between">
                 <div class="flex space-x-2  items-center ">
-                    <p class="text-red-600 font-bold">{{ product.price.toLocaleString() }} ₫</p>
+                    <p class="text-red-600 font-bold">{{ VNDUnit.format(product.price) }} ₫</p>
                     <p v-if="product.oldPrice" class="text-gray-900 line-through text-sm">
-                        {{ product.oldPrice.toLocaleString() }} ₫
+                        {{ VNDUnit.format(product.oldPrice) }} ₫
                     </p>
                     <p v-if="product.discount" class="discount text-xs font-medium">
                         -{{ product.discount }}%
                     </p>
                 </div>
                 <div class="items-center">
-                    <div class="text-[#c52322] font-medium">Đã bán: 132</div>
+                    <div class="text-[#c52322] font-medium tabular-nums">Đã bán: 132</div>
                 </div>
             </div>
         </div>
