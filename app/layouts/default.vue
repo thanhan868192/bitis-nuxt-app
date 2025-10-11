@@ -10,7 +10,7 @@ useHead({
     link: [
         {
             rel: "shortcut icon",
-            href: "//theme.hstatic.net/1000230642/1001205219/14/favicon-new.png?v=9181",
+            href: "/images/favicon-new.png?v=9181",
         },
     ],
 })

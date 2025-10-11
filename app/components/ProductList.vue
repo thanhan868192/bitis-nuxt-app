@@ -11,7 +11,8 @@ const { productCategories } = useProduct()
                 {{ category.categoryName }}
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 lg:px-[15px]">
-                <ProductCard v-for="(product, pIndex) in category.products" :key="pIndex" :product="product" />
+                <ProductCard v-for="(product, pIndex) in category.products" :key="pIndex" :product="product"
+                    :i="pIndex" />
             </div>
             <div v-if="i !== productCategories.length - 1"
                 class="view-more-collection flex justify-center items-center mt-11">

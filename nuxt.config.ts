@@ -9,11 +9,11 @@ export default defineNuxtConfig({
     '@nuxt/ui',
   ],
   css: [
-    '@fortawesome/fontawesome-free/css/all.min.css',
     '~/assets/css/main.css'
   ],
   image: {
-    formats: ['webp', 'avif'],
+    formats: ['avif', 'webp', 'png', 'jpg'],
+    quality: 65,
     densities: [1, 2],
     screens: { sm: 640, md: 768, lg: 1024, xl: 1280, '2xl': 1536 }
   },
@@ -26,4 +26,28 @@ export default defineNuxtConfig({
     server: { hmr: false },
     optimizeDeps: { include: ['swiper', 'swiper/vue'] }
   },
+  postcss: {
+    plugins: {
+      'postcss-font-display': { display: 'swap' }
+    }
+  },
+  nitro: {
+    routeRules: {
+      '/_nuxt/**': {
+        headers: {
+          'Cache-Control': 'public, max-age=31536000, immutable'
+        }
+      },
+      '/images/**': {
+        headers: {
+          'Cache-Control': 'public, max-age=31536000, immutable'
+        }
+      },
+      '/**': {
+        headers: {
+          'Cache-Control': 'no-cache'
+        }
+      }
+    }
+  }
 })

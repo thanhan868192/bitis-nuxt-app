@@ -139,8 +139,8 @@ function onToggle(key: ExpandKey) {
                                         <li><a class="hover:text-blue-700 " href="#">Q&A</a></li>
                                         <li><a class="hover:text-blue-700 " href="#">
                                                 <NuxtImg src="/images/b2b_161ba831bf784bd3b60d4787af503cb2.jpg"
-                                                    alt="B2B action footer" width="150" height="33"
-                                                    class="rounded-[40px]" />
+                                                    alt="B2B action footer" width="150" height="33" loading="lazy"
+                                                    decoding="async" fetchpriority="low" class="rounded-[40px]" />
                                             </a></li>
                                     </ul>
                                 </div>
@@ -157,8 +157,8 @@ function onToggle(key: ExpandKey) {
                                             <li><a class="hover:text-blue-700 " href="#">Q&A</a></li>
                                             <li><a class="hover:text-blue-700 " href="#">
                                                     <NuxtImg src="/images/b2b_161ba831bf784bd3b60d4787af503cb2.jpg"
-                                                        alt="B2B action footer" width="150" height="33"
-                                                        class="rounded-[40px]" />
+                                                        alt="B2B action footer" width="150" height="33" loading="lazy"
+                                                        decoding="async" fetchpriority="low" class="rounded-[40px]" />
                                                 </a></li>
                                         </ul>
                                     </div>
@@ -477,8 +477,9 @@ function onToggle(key: ExpandKey) {
                                 </div>
                                 <div class="footer-bottom-logo flex justify-center lg:col-span-2">
                                     <a href="#" target="_blank" rel="noreferrer">
-                                        <img width="120" height="45" alt="Bộ Công Thương"
-                                            src="/images/bocongthuong_f866573d7d9d4e7fb16d09817459d3cb_medium.png">
+                                        <NuxtImg width="120" height="45" alt="Bộ Công Thương" loading="lazy"
+                                            decoding="async" fetchpriority="low"
+                                            src="/images/bocongthuong_f866573d7d9d4e7fb16d09817459d3cb_medium.png" />
                                     </a>
                                 </div>
                                 <div class="footer-bottom-right block font-semibold text-gray-900 lg:col-span-6">

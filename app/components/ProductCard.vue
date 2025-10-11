@@ -1,16 +1,19 @@
 <script setup lang="ts">
 import type { Product } from '../../types/product'
 
-defineProps<{ product: Product }>()
+defineProps<{ product: Product, i: number }>()
 </script>
 
 <template>
     <div
         class="group relative bg-white border border-gray-300 shadow-sm overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300">
-        <div class="relative w-full overflow-hidden">
-            <NuxtImg :src="product.image" alt="Product" loading="lazy"
+        <div class="relative aspect-[4/5] overflow-hidden">
+            <NuxtImg :src="product.image" alt="Product" width="600" height="750" format="webp" quality="65"
+                :loading="i === 0 ? 'eager' : 'lazy'" :preload="i === 0" :fetchpriority="i === 0 ? 'high' : 'low'"
+                decoding="async"
                 class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
-            <NuxtImg :src="product.hoverImage" alt="Product hover" loading="lazy"
+            <NuxtImg :src="product.hoverImage" alt="Product hover" width="600" height="750" format="webp" quality="65"
+                loading="lazy" decoding="async"
                 class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
             <span v-if="product.isNew"

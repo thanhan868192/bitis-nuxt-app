@@ -1,31 +1,10 @@
 <script setup lang="ts">
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { EffectFade, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css'
-import 'swiper/css/effect-fade'
-import 'swiper/css/pagination'
 
-const slides = [
-    {
-        image: '/images/1920x750__3__7dd4671de2a4436bb84c7f25b0bda4f9.jpg',
-    },
-    {
-        image: '/images/1920x750__4_.png',
-    },
-    {
-        image: '/images/1920x750__27__4581c6d4aa01400c8de10147f85a67aa.jpg',
-    },
-    {
-        image: '/images/1920x750__3_.png',
-    },
-    {
-        image: '/images/1920x750_ff370401f9444988914f88861bf73f60.png',
-    },
-    {
-        image: '/images/1920x750__4__1ef2b72b0e6c4a0da8fe711571c6309b.jpg',
-    },
-]
-const modules = [EffectFade, Pagination, Autoplay]
+const { productSliders, modules } = useProduct()
 </script>
 
 <template>
@@ -34,11 +13,11 @@ const modules = [EffectFade, Pagination, Autoplay]
             <Swiper :modules="modules" :slides-per-view="1" :spaceBetween="30" :loop="true"
                 :autoplay="{ delay: 4000, disableOnInteraction: false }" :effect="'fade'"
                 :fade-effect="{ crossFade: true }" :pagination="{ clickable: true, }" class="h-[750px] md:h-[850px]">
-                <SwiperSlide v-for="(slide, i) in slides" :key="i">
-                    <NuxtImg :src="slide.image" :fetchpriority="i === 0 ? 'high' : 'auto'"
-                        :loading="i === 0 ? 'eager' : 'lazy'" decoding="async" alt="Slide image"
-                        class="h-full w-full object-cover transition-opacity duration-[1500ms] ease-in-out"
-                        format="webp" quality="100" preload sizes="100vw sm:100vw" placeholder />
+                <SwiperSlide v-for="(slide, i) in productSliders" :key="i">
+                    <NuxtImg :src="slide.image" :loading="i === 0 ? 'eager' : 'lazy'" :alt="slide.alt"
+                        :preload="i === 0" :fetchpriority="i === 0 ? 'high' : 'low'" decoding="async" width="1536"
+                        height="750" class="h-full w-full object-cover transition-opacity duration-[1500ms] ease-in-out"
+                        format="webp" quality="65" sizes="100vw" />
                 </SwiperSlide>
             </Swiper>
         </ClientOnly>

@@ -15,3 +15,8 @@ export interface ProductCategory {
     categoryName: string
     products: Product[]
 }
+
+export interface ProductSlider {
+    image: string
+    alt: string
+}
