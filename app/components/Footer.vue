@@ -140,7 +140,7 @@ function onToggle(key: ExpandKey) {
                                         <li><a class="hover:text-blue-700 " href="#">
                                                 <NuxtImg src="/images/b2b_161ba831bf784bd3b60d4787af503cb2.jpg"
                                                     alt="B2B action footer" width="150" height="33" loading="lazy"
-                                                    decoding="async" fetchpriority="low" class="rounded-[40px]" />
+                                                    decoding="async" class="rounded-[40px]" />
                                             </a></li>
                                     </ul>
                                 </div>
@@ -158,7 +158,7 @@ function onToggle(key: ExpandKey) {
                                             <li><a class="hover:text-blue-700 " href="#">
                                                     <NuxtImg src="/images/b2b_161ba831bf784bd3b60d4787af503cb2.jpg"
                                                         alt="B2B action footer" width="150" height="33" loading="lazy"
-                                                        decoding="async" fetchpriority="low" class="rounded-[40px]" />
+                                                        fetchpriority="low" class="rounded-[40px]" />
                                                 </a></li>
                                         </ul>
                                     </div>

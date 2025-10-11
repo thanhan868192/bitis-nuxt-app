@@ -9,18 +9,16 @@ const { productSliders, modules } = useProduct()
 
 <template>
     <section class="product-slider relative w-full overflow-hidden">
-        <ClientOnly>
-            <Swiper :modules="modules" :slides-per-view="1" :spaceBetween="30" :loop="true"
-                :autoplay="{ delay: 4000, disableOnInteraction: false }" :effect="'fade'"
-                :fade-effect="{ crossFade: true }" :pagination="{ clickable: true, }" class="h-[750px] md:h-[850px]">
-                <SwiperSlide v-for="(slide, i) in productSliders" :key="i">
-                    <NuxtImg :src="slide.image" :loading="i === 0 ? 'eager' : 'lazy'" :alt="slide.alt"
-                        :preload="i === 0" :fetchpriority="i === 0 ? 'high' : 'low'" decoding="async" width="1536"
-                        height="750" class="h-full w-full object-cover transition-opacity duration-[1500ms] ease-in-out"
-                        format="webp" quality="65" sizes="100vw" />
-                </SwiperSlide>
-            </Swiper>
-        </ClientOnly>
+        <Swiper :modules="modules" :slides-per-view="1" :spaceBetween="30" :loop="true"
+            :autoplay="{ delay: 4000, disableOnInteraction: false }" :effect="'fade'" :fade-effect="{ crossFade: true }"
+            :pagination="{ clickable: true, }">
+            <SwiperSlide v-for="(slide, i) in productSliders" :key="i">
+                <NuxtImg :src="slide.image" :loading="i === 0 ? 'eager' : 'lazy'" :alt="slide.alt" :preload="i === 0"
+                    :fetchpriority="i === 0 ? 'high' : 'low'" decoding="async" width="1920" height="750"
+                    class="h-full w-full object-cover transition-opacity duration-[1500ms] ease-in-out" format="webp"
+                    quality="65" sizes="100vw sm:100vw" placeholder />
+            </SwiperSlide>
+        </Swiper>
     </section>
 </template>
 

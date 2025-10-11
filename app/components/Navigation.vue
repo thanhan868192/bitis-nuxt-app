@@ -164,8 +164,12 @@ onMounted(() => {
                                         <li v-for="(item, index) in items" :key="index" class="has-submenu">
                                             <span>{{ item.label }}</span>
 
-                                            <i v-if="item.children.length" class="fa fa-chevron-down text-sm"
-                                                aria-hidden="true"></i>
+                                            <svg v-if="item.children.length"
+                                                class="fa-chevron-down h-5 w-5 transition-transform font-semibold text-gray-900"
+                                                viewBox="0 0 20 20" fill="currentColor">
+                                                <path
+                                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" />
+                                            </svg>
 
                                             <ul v-if="item.children.length" class="menu-list-submain">
                                                 <li v-for="(child, childIndex) in item.children" :key="childIndex">
@@ -306,9 +310,8 @@ onMounted(() => {
                         <div class="p-4">
                             <a href="#" aria-label="B2B action" target="_blank">
                                 <NuxtImg style="width: 120px; height: 28px; border-radius: 40px;"
-                                    src="https://file.hstatic.net/1000230642/file/b2b_161ba831bf784bd3b60d4787af503cb2.jpg"
-                                    loading="lazy" decoding="async" fetchpriority="low" alt="B2B action" width="120"
-                                    height="28" />
+                                    src="/images/b2b_161ba831bf784bd3b60d4787af503cb2.jpg" loading="lazy"
+                                    decoding="async" alt="B2B action" width="120" height="28" />
                             </a>
                         </div>
                     </div>
@@ -414,7 +417,7 @@ onMounted(() => {
     opacity: 0.85;
 }
 
-.main-header .header-wrap-menu ul.menu-list-primary>li>i {
+.main-header .header-wrap-menu ul.menu-list-primary>li>svg {
     display: inline-block;
     vertical-align: middle;
     font-size: 8px;
@@ -422,7 +425,7 @@ onMounted(() => {
     transition: transform .2s;
 }
 
-.main-header .header-wrap-menu ul.menu-list-primary>li:hover>i {
+.main-header .header-wrap-menu ul.menu-list-primary>li:hover>svg {
     opacity: 1;
     transform: rotate(180deg);
 }
