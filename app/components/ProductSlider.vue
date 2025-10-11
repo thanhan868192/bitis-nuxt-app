@@ -4,6 +4,7 @@ import { EffectFade, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/pagination'
+
 const slides = [
     {
         image: '/images/1920x750__3__7dd4671de2a4436bb84c7f25b0bda4f9.jpg',

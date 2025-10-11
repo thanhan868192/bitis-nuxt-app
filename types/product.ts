@@ -11,7 +11,7 @@ export interface Product {
 }
 
 
-export interface Category {
+export interface ProductCategory {
     categoryName: string
     products: Product[]
 }

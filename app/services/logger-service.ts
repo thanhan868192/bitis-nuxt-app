@@ -8,6 +8,6 @@ export class LoggerService {
     }
 
     error(msg: string, data?: any) {
-        console.log('[INFO]', msg, data)
+        console.log('[ERROR]', msg, data)
     }
 }

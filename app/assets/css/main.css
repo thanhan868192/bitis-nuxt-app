@@ -22,10 +22,64 @@ body {
 }
 @media (min-width: 1200px) {
   .lg-padding {
-    padding: 0 80px;
+    padding: 0 90px;
   }
+}
 
-  .bottom-padding {
-    padding: 0 30px;
+@media (min-width: 1600px) {
+  .header-padding {
+    width: 100%;
+    padding: 0 90px;
   }
+}
+
+@media (max-width: 1536px) {
+  .header-padding {
+    width: 100%;
+  }
+}
+
+.module_translate {
+  width: 75px;
+  position: relative;
+}
+
+.module_translate_mask {
+  padding-left: 30px;
+  background: url("/images/vietnam.png") no-repeat;
+  background-size: contain;
+  background-position: left center;
+  cursor: pointer;
+}
+
+.module_translate .module_translate_mask i {
+  font-size: 8px;
+}
+
+.module_translate_main {
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 5;
+  background: #fff;
+}
+
+.module_translate_main:not(.open) {
+  display: none;
+}
+
+.module_translate_main a {
+  display: block;
+  padding-left: 30px;
+  background: url("/images/vietnam.png") no-repeat;
+  background-size: contain;
+  background-position: left center;
+  color: #000;
+}
+
+.module_translate_main a[data-pick="en"] {
+  background-image: url("/images/united-kingdom.png");
 }

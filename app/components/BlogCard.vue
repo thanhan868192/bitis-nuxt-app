@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { BlogPost } from '../../types/blog-post'
+
 defineProps<{ post: BlogPost }>()
 </script>
 

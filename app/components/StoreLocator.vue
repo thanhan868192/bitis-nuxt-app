@@ -1,29 +1,8 @@
 <script setup lang="ts">
-import type { Store } from '../../types/store'
+import { useStoreLocator } from '~/composables/useStoreLocator';
 
-const stores = ref<Store[]>([
-    { id: '1', name: 'CH Chợ Lớn - Quận 6 - HCM', address: '56-58-60-62 Tháp Mười, P.2, Q.6, TP.HCM', region: 'HCM' },
-    { id: '2', name: 'CH 594 Thống Nhất - Gò Vấp - HCM', address: '594 Thống Nhất, P.16, Q.Gò Vấp, TP.HCM', region: 'HCM' },
-    { id: '3', name: 'CH 242 Huỳnh Tấn Phát - Nhà Bè - HCM', address: '1848 Huỳnh Tấn Phát, Nhà Bè, TP.HCM', region: 'HCM' },
-    { id: '4', name: 'CH 02 Điện Biên Phủ - Bình Thạnh - HCM', address: '2 Điện Biên Phủ, P.1, Q.Bình Thạnh, TP.HCM', region: 'HCM' },
-    { id: '5', name: 'CH Nguyễn Trãi - Hà Nội', address: 'Nguyễn Trãi, Thanh Xuân, Hà Nội', region: 'HN' },
-    { id: '6', name: 'CH Bạch Đằng - Đà Nẵng', address: 'Bạch Đằng, Hải Châu, Đà Nẵng', region: 'DN' },
-])
+const { regions, region, filtered } = useStoreLocator()
 
-// dropdown list
-const regions = [
-    { value: 'ALL', label: 'Tất cả' },
-    { value: 'HCM', label: 'TP.HCM' },
-    { value: 'HN', label: 'Hà Nội' },
-    { value: 'DN', label: 'Đà Nẵng' },
-    { value: 'KHAC', label: 'Khu vực khác' },
-] as const
-
-type RegionValue = typeof regions[number]['value']
-const region = ref<RegionValue>('ALL')
-
-const filtered = computed(() =>
-    region.value === 'ALL' ? stores.value : stores.value.filter(s => s.region === region.value)) 
 </script>
 
 <template>

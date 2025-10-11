@@ -1,9 +1,5 @@
 <script setup lang="ts">
-const isOpen = ref(false)
-
-const toggleTranslate = () => {
-    isOpen.value = !isOpen.value
-}
+const { isOpen, toggleTranslate } = useHeader();
 
 </script>
 
@@ -43,9 +39,9 @@ const toggleTranslate = () => {
                         </li>
                         <li>
                             <a href="#" aria-label="B2B action" target="_blank">
-                                <img style="width: 120px; height: 28px;"
+                                <NuxtImg style="width: 120px; height: 28px;"
                                     src="https://file.hstatic.net/1000230642/file/b2b_161ba831bf784bd3b60d4787af503cb2.jpg"
-                                    alt="B2B action" width="120" height="28">
+                                    alt="B2B action" width="120" height="28" />
                             </a>
                         </li>
                     </ul>
@@ -85,55 +81,14 @@ const toggleTranslate = () => {
     display: block;
 }
 
-.module_translate {
-    width: 75px;
-    position: relative;
-}
-
-.module_translate_mask {
-    padding-left: 30px;
-    background: url('/images/vietnam.png') no-repeat;
-    background-size: contain;
-    background-position: left center;
-    cursor: pointer;
-}
-
-.module_translate .module_translate_mask i {
-    font-size: 8px;
-}
-
-.module_translate_main {
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
-    z-index: 5;
-    background: #fff;
-}
-
-.module_translate_main:not(.open) {
-    display: none;
-}
-
 .topbar .topbar-content .right-topbar ul li~li {
     padding: 0 0 0 10px;
     margin: 0 0 0 10px;
     border-left: 1px solid #FFF;
 }
 
-.module_translate_main a {
-    display: block;
-    padding-left: 30px;
-    background: url('/images/vietnam.png') no-repeat;
-    background-size: contain;
-    background-position: left center;
+.topbar .module_translate_main a {
     color: #000;
-}
-
-.module_translate_main a[data-pick="en"] {
-    background-image: url('/images/united-kingdom.png');
 }
 
 @media (max-width: 991px) {

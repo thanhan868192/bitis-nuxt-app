@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import dummyData from '../../data/product.json';
-import type { Category } from '../../types/product'
+import { useProduct } from '~/composables/useProduct';
 
-const categories = ref(dummyData as Category[]);
+const { productCategories } = useProduct()
 </script>
 
 <template>
-    <section v-for="(category, i) in categories" :key="i" class="product-list mt-16">
+    <section v-for="(category, i) in productCategories" :key="i" class="product-list mt-16">
         <div class="container mx-auto px-4 lg-padding">
             <div class="section-heading-tab-new">
                 {{ category.categoryName }}
@@ -14,7 +13,8 @@ const categories = ref(dummyData as Category[]);
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 lg:px-[15px]">
                 <ProductCard v-for="(product, pIndex) in category.products" :key="pIndex" :product="product" />
             </div>
-            <div v-if="i !== categories.length - 1" class="view-more-collection flex justify-center items-center mt-11">
+            <div v-if="i !== productCategories.length - 1"
+                class="view-more-collection flex justify-center items-center mt-11">
                 <a href="#">CÒN NHIỀU LẮM, XEM THÊM</a>
             </div>
         </div>

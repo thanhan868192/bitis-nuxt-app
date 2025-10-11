@@ -1,50 +1,13 @@
 <script setup lang="ts">
-const gallerys = [
-    {
-        image: '/images/240x240_8_bfbc1f9a56f24921979f053befbb7d67.jpg',
-        alt: 'Gallery 1'
-    },
-    {
-        image: '/images/balo__1_.png',
-        alt: 'Gallery 2'
-    },
-    {
-        image: '/images/efffortless__1_.png',
-        alt: 'Gallery 3'
+import { useGallery } from '~/composables/useGallery';
 
-    },
-    {
-        image: '/images/embrace__1_.png',
-        alt: 'Gallery 4'
-
-    },
-    {
-        image: '/images/gosto__1_.png',
-        alt: 'Gallery 5'
-
-    },
-    {
-        image: '/images/helio__1_.png',
-        alt: 'Gallery 6'
-
-    },
-    {
-        image: '/images/litebound__1_.png',
-        alt: 'Gallery 7'
-
-    },
-    {
-        image: '/images/ucare__1_.png',
-        alt: 'Gallery 8'
-
-    },
-]
+const { galleries } = useGallery()
 </script>
 
 <template>
     <section class="gallery relative">
         <div class="flex flex-wrap">
-            <div v-for="(gallery, i) in gallerys" :key="i" class="gallrey-item md:w-[calc(100%/8)] mobile-width">
+            <div v-for="(gallery, i) in galleries" :key="i" class="gallrey-item md:w-[calc(100%/8)] mobile-width">
                 <a class="group-banner-hover" href="#" target="_blank" rel="noreferrer">
                     <NuxtImg :src="gallery.image" :alt="gallery.alt" width="320" height="320"
                         sizes="(max-width: 640px) 100vw, 320px" class="block w-full h-auto" placeholder />

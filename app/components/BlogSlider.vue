@@ -1,19 +1,10 @@
 <script setup lang="ts">
 import 'swiper/css'
 import 'swiper/css/navigation'
-import { A11y, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import type { BlogPost } from '../../types/blog-post'
-import data from '../../data/blogs.json'
-const posts = ref(data as BlogPost[]);
+import { useBlog } from '~/composables/useBlog'
 
-const modules = [Navigation, A11y]
-const breakpoints = {
-    0: { slidesPerView: 1, spaceBetween: 16 },
-    640: { slidesPerView: 2, spaceBetween: 20 },
-    1024: { slidesPerView: 3, spaceBetween: 24 },
-    1280: { slidesPerView: 4, spaceBetween: 26 }
-}
+const { blogs, modules, breakpoints } = useBlog()
 </script>
 
 <template>
@@ -25,7 +16,7 @@ const breakpoints = {
                 </header>
                 <Swiper :modules="modules" :breakpoints="breakpoints" :loop="false" :navigation="true" :observer="true"
                     :observe-parents="true" class="!pb-10">
-                    <SwiperSlide v-for="p in posts" :key="p.id">
+                    <SwiperSlide v-for="p in blogs" :key="p.id">
                         <BlogCard :post="p" />
                     </SwiperSlide>
                 </Swiper>
