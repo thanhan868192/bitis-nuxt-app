@@ -1,8 +1,8 @@
-import { BlogService } from "~/services/blog-service"
-import { GalleryService } from "~/services/gallery-service"
-import { LoggerService } from "~/services/logger-service"
-import { ProductService } from "~/services/product-service"
-import { StoreLocatorService } from "~/services/store-locator-service"
+import { BlogService } from "~/services/blogService"
+import { GalleryService } from "~/services/galleryService"
+import { LoggerService } from "~/services/loggerService"
+import { ProductService } from "~/services/productService"
+import { StoreLocatorService } from "~/services/storeLocatorService"
 
 export default defineNuxtPlugin(() => {
     const loggerService = new LoggerService('info')
