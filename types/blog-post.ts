@@ -3,5 +3,4 @@ export interface BlogPost {
     title: string
     image: string
     date: string
-    excerpt: string
 }

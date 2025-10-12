@@ -52,10 +52,5 @@ export default defineNuxtConfig({
     },
     compressPublicAssets: true,
   },
-  routeRules: { '/**': { prerender: false } },
-  test: {
-    environment: 'happy-dom',
-    globals: true,
-    setupFiles: ['./test/setupTests.ts']
-  }
+  routeRules: { '/**': { prerender: false } }
 })

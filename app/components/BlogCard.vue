@@ -15,9 +15,7 @@ defineProps<{ post: BlogPost }>()
                 {{ post.title }}
             </h3>
 
-            <p class="text-sm text-gray-500 mt-2 ">
-                {{ post.excerpt }}
-            </p>
+            <p class="text-sm text-gray-500 mt-2 ">[...]</p>
 
             <div class="mt-4 flex items-center justify-between pt-2.5 border-t border-gray-300">
                 <time class="text-sm text-gray-500 italic">

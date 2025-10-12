@@ -1,3 +1,5 @@
+import { useNuxtApp } from '#app'
+import { useState } from '#imports'
 import type { BlogPost } from '../../types/blog-post'
 
 export const useBlog = () => {
