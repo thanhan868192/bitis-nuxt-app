@@ -14,7 +14,6 @@
     <NewsLetter />
     <Gallery />
     <Footer />
-    <Footer />
 </template>
 
 <style scoped></style>
