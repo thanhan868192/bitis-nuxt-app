@@ -1,5 +1,5 @@
 export class LoggerService {
-    constructor(private logLevel: 'debug' | 'info' | 'error') { }
+    constructor(private logLevel: 'info' | 'error') { }
 
     info(msg: string, data?: any) {
         if (this.logLevel !== 'error') {

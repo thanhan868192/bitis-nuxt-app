@@ -1,3 +1,5 @@
+import { useNuxtApp } from '#app'
+import { useState } from '#imports'
 import type { Gallery } from '../../types/gallery'
 
 export const useGallery = () => {

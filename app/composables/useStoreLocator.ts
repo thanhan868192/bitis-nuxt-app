@@ -1,3 +1,6 @@
+import { useNuxtApp } from '#app'
+import { useState } from '#imports'
+import { ref, computed } from 'vue'
 import type { Store } from '../../types/store'
 
 export const useStoreLocator = () => {
@@ -26,5 +29,5 @@ export const useStoreLocator = () => {
     const filtered = computed(() =>
         region.value === 'ALL' ? stores.value : stores.value.filter(s => s.region === region.value))
 
-    return { regions, region, filtered }
+    return { regions, region, filtered, stores }
 }

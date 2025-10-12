@@ -1,3 +1,5 @@
+import { useNuxtApp } from '#app'
+import { useState } from '#imports'
 import { EffectFade, Pagination, Autoplay } from 'swiper/modules'
 import type { ProductCategory, ProductSlider } from '../../types/product'
 
@@ -21,7 +23,7 @@ export const useProduct = () => {
     )
 
     if (productSliders.value) {
-        $loggerService.info('Get Product Categories', productCategories.value)
+        $loggerService.info('Get Product Sliders', productSliders.value)
     }
     return { productCategories, productSliders, modules }
 }
