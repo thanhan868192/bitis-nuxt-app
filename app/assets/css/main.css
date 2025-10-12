@@ -37,6 +37,9 @@ body {
   .header-padding {
     width: 100%;
   }
+  .price-item {
+    font-size: 12px;
+  }
 }
 
 .module_translate {

@@ -2,7 +2,7 @@
 
 <template>
     <div class="new-hunter mt-[80px] bg-[#ff3D00] h-16">
-        <div class="w-full px-20">
+        <div class="new-huter-container w-full px-20">
             <a class="flex text-4xl leading-[19.5px] items-center relative justify-center w-full h-full text-black">
                 <svg class="absolute left-0 top-[10px]" width="127" height="41" viewBox="0 0 127 41" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -18,5 +18,16 @@
 <style scoped>
 .new-hunter {
     color: #e60909;
+}
+
+@media (max-width: 1536px) {
+    .new-hunter {
+        margin-top: 55px;
+
+    }
+
+    .new-hunter .new-huter-container {
+        padding-inline: calc(var(--spacing) * 4)
+    }
 }
 </style>

@@ -34,9 +34,9 @@ const VNDUnit = new Intl.NumberFormat('vi-VN')
                 {{ product.title }}
             </h3>
 
-            <div class="mt-2 flex justify-between">
+            <div class="mt-2 flex flex-wrap justify-between">
                 <div class="flex gap-2 items-center ">
-                    <p class="text-red-600 font-bold">{{ VNDUnit.format(product.price) }} ₫</p>
+                    <p class="price-item text-red-600 font-bold">{{ VNDUnit.format(product.price) }} ₫</p>
                     <p v-if="product.oldPrice" class="text-gray-900 line-through text-sm">
                         {{ VNDUnit.format(product.oldPrice) }} ₫
                     </p>

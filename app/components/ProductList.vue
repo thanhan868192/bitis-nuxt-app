@@ -10,7 +10,7 @@ const { productCategories } = useProduct()
             <div class="section-heading-tab-new">
                 {{ category.categoryName }}
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 lg:px-[15px]">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-6 lg:px-[15px]">
                 <ProductCard v-for="(product, pIndex) in category.products" :key="pIndex" :product="product"
                     :i="pIndex" />
             </div>
