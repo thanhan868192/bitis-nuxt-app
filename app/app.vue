@@ -4,6 +4,7 @@
   <div class="font-Montserrat bg-white">
     <NuxtLayout>
       <NuxtPage />
+      <ButtonToTop />
     </NuxtLayout>
   </div>
 </template>

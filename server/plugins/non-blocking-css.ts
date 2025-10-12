@@ -1,4 +1,5 @@
 export default (nitroApp: any) => {
+    if (import.meta.dev) return;
     nitroApp.hooks.hook('render:response', (response: any, _ctx: any) => {
         const headers = (response.headers ||= {})
         const ct = headers['content-type'] || headers['Content-Type'] || 'text/html'

@@ -212,6 +212,12 @@ onMounted(() => {
     color: #000000;
 }
 
+.main-header .header-wrap-menu ul.menu-list-primary li.has-submenu {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    cursor: pointer;
+}
+
 .main-header .header-wrap-menu ul.menu-list-primary li.has-submenu .menu-list-submain {
     background: #fff;
     min-width: 240px;
@@ -223,14 +229,13 @@ onMounted(() => {
     visibility: hidden;
     opacity: 0;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .main-header .header-wrap-menu ul.menu-list-primary li.has-submenu:hover>.menu-list-submain {
     pointer-events: auto;
     visibility: visible;
-    top: 200%;
+    top: 100%;
     opacity: 1;
     color: #252a2b;
 }
