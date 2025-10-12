@@ -9,7 +9,7 @@ const { galleries } = useGallery()
         <div class="flex flex-wrap">
             <div v-for="(gallery, i) in galleries" :key="i" class="gallrey-item md:w-[calc(100%/8)] mobile-width">
                 <a class="group-banner-hover" href="#" target="_blank" rel="noreferrer">
-                    <NuxtImg :src="gallery.image" :alt="gallery.alt" quality="55" format="'webp'" width="320"
+                    <NuxtImg :src="gallery.image" :alt="gallery.alt" quality="55" format="webp" width="320"
                         loading="lazy" decoding="async" fetchpriority='low' height="320"
                         sizes="(max-width: 640px) 100vw, 320px" class="block w-full h-auto" placeholder />
                 </a>

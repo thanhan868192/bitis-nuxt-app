@@ -24,7 +24,8 @@ export default defineNuxtConfig({
   },
   vite: {
     server: { hmr: false },
-    optimizeDeps: { include: ['swiper', 'swiper/vue'] }
+    optimizeDeps: { include: ['swiper', 'swiper/vue'] },
+    build: { sourcemap: true }
   },
   postcss: {
     plugins: {
@@ -48,6 +49,13 @@ export default defineNuxtConfig({
           'Cache-Control': 'no-cache'
         }
       }
-    }
+    },
+    compressPublicAssets: true,
+  },
+  routeRules: { '/**': { prerender: false } },
+  test: {
+    environment: 'happy-dom',
+    globals: true,
+    setupFiles: ['./test/setupTests.ts']
   }
 })

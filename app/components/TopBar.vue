@@ -28,8 +28,13 @@ const { isOpen, toggleTranslate } = useHeader();
                         </li>
                         <li>
                             <div class="module_translate">
-                                <div class="module_translate_mask" @click="toggleTranslate">
-                                    <span>VN</span> <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                <div class="module_translate_mask flex items-center" @click="toggleTranslate">
+                                    <span>VN</span> <svg
+                                        class="fa-chevron-down h-5 w-5 transition-transform font-semibold text-white"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path
+                                            d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" />
+                                    </svg>
                                 </div>
                                 <div :class="['module_translate_main', { open: isOpen }]">
                                     <a href="#" data-pick="">VN</a>

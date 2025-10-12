@@ -12,16 +12,16 @@
             <div class="max-w-[1400px] mx-auto px-6">
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <a class="banner-effect">
-                        <NuxtImg src="/images/banner_giaytennis.jpg" width="1024" height="576"
-                            class="w-full h-56 md:h-64 object-cover" alt="Giày tennis" />
+                        <NuxtImg src="/images/banner_giaytennis.avif" width="1024" height="576" loading="lazy"
+                            decoding="async" class="w-full h-56 md:h-64 object-cover" alt="Giày tennis" />
                     </a>
                     <a class="banner-effect">
-                        <NuxtImg src="/images/banner_giaytay.jpg" width="1024" height="576"
-                            class="w-full h-56 md:h-64 object-cover" alt="Giày tây" />
+                        <NuxtImg src="/images/banner_giaytay.avif" width="1024" height="576" loading="lazy"
+                            decoding="async" class="w-full h-56 md:h-64 object-cover" alt="Giày tây" />
                     </a>
                     <a class="banner-effect">
-                        <NuxtImg src="/images/banner_gauchuatam_510x275.jpg" width="1024" height="552"
-                            class="w-full h-56 md:h-64 object-cover" alt="Gấu chữa tâm" />
+                        <NuxtImg src="/images/banner_gauchuatam_510x275.avif" width="1024" height="552" loading="lazy"
+                            decoding="async" class="w-full h-56 md:h-64 object-cover" alt="Gấu chữa tâm" />
                     </a>
                 </div>
             </div>

@@ -3,8 +3,10 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { useBlog } from '~/composables/useBlog'
+import { useSwiper } from '~/composables/useSwiper'
 
-const { blogs, modules, breakpoints } = useBlog()
+const { blogs } = useBlog()
+const { modules, breakpoints } = useSwiper()
 </script>
 
 <template>

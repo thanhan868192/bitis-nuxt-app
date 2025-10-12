@@ -3,15 +3,17 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { useSwiper } from '~/composables/useSwiper'
 
-const { productSliders, modules } = useProduct()
+const { productSliders } = useProduct()
+const { modules, onAfterInit } = useSwiper()
 </script>
 
 <template>
     <section class="product-slider relative w-full overflow-hidden">
         <Swiper :modules="modules" :slides-per-view="1" :spaceBetween="30" :loop="true"
             :autoplay="{ delay: 4000, disableOnInteraction: false }" :effect="'fade'" :fade-effect="{ crossFade: true }"
-            :pagination="{ clickable: true, }">
+            :pagination="{ clickable: true, }" @afterInit="onAfterInit">
             <SwiperSlide v-for="(slide, i) in productSliders" :key="i">
                 <NuxtImg :src="slide.image" :loading="i === 0 ? 'eager' : 'lazy'" :alt="slide.alt" :preload="i === 0"
                     :fetchpriority="i === 0 ? 'high' : 'low'" decoding="async" width="1920" height="750"
