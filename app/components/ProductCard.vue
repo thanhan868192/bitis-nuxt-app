@@ -30,7 +30,8 @@ const VNDUnit = new Intl.NumberFormat('vi-VN')
                 <p class="text-sm font-semibold text-gray-900">{{ product.colors }} Màu sắc</p>
             </div>
 
-            <h3 class="text-sm font-semibold text-gray-900 mt-1 line-clamp-2 leading-snug min-h-[3.25rem]">
+            <h3
+                class="text-sm lg:text-[16px] font-semibold text-gray-900 mt-1 line-clamp-2 leading-snug min-h-[3.25rem]">
                 {{ product.title }}
             </h3>
 

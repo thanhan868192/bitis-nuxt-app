@@ -4,7 +4,7 @@ import { useProduct } from '~/composables/useProduct';
 const { productCategories } = useProduct()
 </script>
 
-<template>
+<template v-if="!productCategories?.length">
     <section v-for="(category, i) in productCategories" :key="i" class="product-list mt-16">
         <div class="container mx-auto px-4 lg-padding">
             <div class="section-heading-tab-new">
@@ -14,9 +14,8 @@ const { productCategories } = useProduct()
                 <ProductCard v-for="(product, pIndex) in category.products" :key="pIndex" :product="product"
                     :i="pIndex" />
             </div>
-            <div v-if="i !== productCategories.length - 1"
-                class="view-more-collection flex justify-center items-center mt-11">
-                <a href="#">CÒN NHIỀU LẮM, XEM THÊM</a>
+            <div class="view-more-collection flex justify-center items-center mt-11">
+                <a v-show="i !== productCategories.length - 1" href="#">CÒN NHIỀU LẮM, XEM THÊM</a>
             </div>
         </div>
     </section>

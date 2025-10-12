@@ -19,15 +19,4 @@
 .new-hunter {
     color: #e60909;
 }
-
-@media (max-width: 1536px) {
-    .new-hunter {
-        margin-top: 55px;
-
-    }
-
-    .new-hunter .new-huter-container {
-        padding-inline: calc(var(--spacing) * 4)
-    }
-}
 </style>
