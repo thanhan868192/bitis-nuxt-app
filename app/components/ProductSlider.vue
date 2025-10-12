@@ -1,24 +1,35 @@
 <script setup lang="ts">
-import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { useSwiper } from '~/composables/useSwiper'
 
 const { productSliders } = useProduct()
-const { modules, onAfterInit } = useSwiper()
+const { modules, speed, eagerIndex, onAfterInit } = useSwiper()
+
+useHead(() => ({
+    link: productSliders.value?.[0]
+        ? [{
+            rel: 'preload',
+            as: 'image',
+            href: productSliders.value[0].image,
+            imagesizes: '100vw',
+            fetchpriority: 'high'
+        }]
+        : []
+}))
 </script>
 
 <template>
     <section class="product-slider relative w-full overflow-hidden">
-        <Swiper :modules="modules" :slides-per-view="1" :spaceBetween="30" :loop="true"
+        <Swiper :modules="modules" :slides-per-view="1" :spaceBetween="30" :loop="true" :speed="speed"
             :autoplay="{ delay: 4000, disableOnInteraction: false }" :effect="'fade'" :fade-effect="{ crossFade: true }"
             :pagination="{ clickable: true, }" @afterInit="onAfterInit">
             <SwiperSlide v-for="(slide, i) in productSliders" :key="i">
-                <NuxtImg :src="slide.image" :loading="i === 0 ? 'eager' : 'lazy'" :alt="slide.alt" :preload="i === 0"
-                    :fetchpriority="i === 0 ? 'high' : 'low'" decoding="async" width="1920" height="750"
-                    class="h-full w-full object-cover transition-opacity duration-[1500ms] ease-in-out" quality="65"
-                    sizes="100vw sm:100vw" format="webp" placeholder />
+                <NuxtImg :src="slide.image" :loading="i === eagerIndex ? 'eager' : 'lazy'" :alt="slide.alt"
+                    :preload="i === eagerIndex" :fetchpriority="i === eagerIndex ? 'high' : 'low'" decoding="sync"
+                    width="1920" height="750" class="h-full w-full object-cover" quality="65" sizes="100vw sm:100vw"
+                    format="webp" placeholder />
             </SwiperSlide>
         </Swiper>
     </section>

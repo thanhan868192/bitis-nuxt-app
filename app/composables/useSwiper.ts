@@ -9,14 +9,12 @@ export const useSwiper = () => {
         1280: { slidesPerView: 4, spaceBetween: 26 }
     }
 
+    const eagerIndex = ref(0)
     const speed = ref(0)
-    const isReady = ref(false)
 
-    const onAfterInit = () => {
-        requestAnimationFrame(() => {
-            speed.value = 600
-            isReady.value = true
-        })
+    const onAfterInit = (swiper: any) => {
+        eagerIndex.value = swiper.realIndex
+        nextTick(() => { speed.value = 700 })
     }
-    return { modules, breakpoints, onAfterInit };
+    return { modules, breakpoints, speed, eagerIndex, onAfterInit };
 }

@@ -63,7 +63,7 @@ onMounted(() => {
                             </div>
                             <div class="header-wrap-logo px-4">
                                 <NuxtImg class="brand-img" src="/images/brand.svg" alt="Brand" width="120"
-                                    height="36" />
+                                    fetchpriority="high" height="36" />
                             </div>
 
                             <div class="header-wrap-menu flex-1 hidden lg:flex justify-center">

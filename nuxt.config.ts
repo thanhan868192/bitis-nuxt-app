@@ -2,8 +2,9 @@
 export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
+    '@nuxtjs/critters',
     '@nuxt/image',
     '@nuxtjs/google-fonts',
     '@nuxt/ui',
@@ -11,11 +12,23 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css'
   ],
+  critters: {
+    config: {
+      preload: 'swap',
+      inlineFonts: true,
+      preloadFonts: true,
+      pruneSource: true,
+      reduceInlineStyles: true
+    }
+  },
   image: {
     formats: ['avif', 'webp', 'png', 'jpg'],
     quality: 65,
     densities: [1, 2],
     screens: { sm: 640, md: 768, lg: 1024, xl: 1280, '2xl': 1536 }
+  },
+  features: {
+    inlineStyles: true,
   },
   googleFonts: {
     families: {
@@ -25,7 +38,7 @@ export default defineNuxtConfig({
   vite: {
     server: { hmr: false },
     optimizeDeps: { include: ['swiper', 'swiper/vue'] },
-    build: { sourcemap: true }
+    build: { sourcemap: true, cssCodeSplit: true },
   },
   postcss: {
     plugins: {

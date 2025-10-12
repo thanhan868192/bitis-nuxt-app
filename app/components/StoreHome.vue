@@ -16,7 +16,8 @@
                     <div class="lg:col-span-2">
                         <NuxtImg
                             src="/images/map_biti_s_1024x1024_e7451fce602__1__dd3c94b0314e4ecbabbb0198510b97d3_1024x1024.avif"
-                            width="1024" height="758" class="w-full h-full max-w-full object-cover"
+                            width="1024" height="758" class="w-full h-full max-w-full object-cover" format="webp"
+                            placeholder sizes="sm:100vw md:50vw lg:33vw"
                             alt="Map map_biti_s_1024x1024_e7451fce602__1__dd3c94b0314e4ecbabbb0198510b97d3_1024x1024" />
                     </div>
                 </div>
