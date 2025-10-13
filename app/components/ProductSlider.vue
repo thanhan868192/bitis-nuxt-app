@@ -2,17 +2,18 @@
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { useSwiper } from '~/composables/useSwiper'
+import { useSwiper } from '~/composables/useSwiper';
+import type { ProductSlider } from '../../types/product';
 
-const { productSliders } = useProduct()
+const props = defineProps<{ productSliders: ProductSlider[] }>()
 const { modules, speed, eagerIndex, onAfterInit } = useSwiper()
 
 useHead(() => ({
-    link: productSliders.value?.[0]
+    link: props.productSliders?.[0]
         ? [{
             rel: 'preload',
             as: 'image',
-            href: productSliders.value[0].image,
+            href: props.productSliders[0].image,
             imagesizes: '100vw',
             fetchpriority: 'high'
         }]

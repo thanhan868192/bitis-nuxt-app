@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useProduct } from '~/composables/useProduct';
+import type { ProductCategory } from '../../types/product';
 
-const { productCategories } = useProduct()
+defineProps<{ productCategories: ProductCategory[] }>()
 </script>
 
 <template>
