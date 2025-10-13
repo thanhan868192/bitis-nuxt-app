@@ -35,7 +35,7 @@ const formatVND = (v?: number) => (v == null ? '' : VNDUnit.format(v))
                 {{ product.title }}
             </h3>
 
-            <div class="mt-2 flex flex-wrap justify-between">
+            <div class="mt-2 flex flex-wrap justify-between min-h-[1.9rem]">
                 <div class="flex gap-2 items-center ">
                     <p class="price-item text-red-600 font-bold">{{ formatVND(product.price) }} ₫</p>
                     <p v-show="product.oldPrice" class="text-gray-900 line-through text-sm">
