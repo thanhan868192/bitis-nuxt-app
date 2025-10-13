@@ -11,11 +11,10 @@ const VNDUnit = new Intl.NumberFormat('vi-VN')
         <div class="relative aspect-[4/5] overflow-hidden">
             <NuxtImg :src="product.image" alt="Product" width="600" height="750" format="webp" quality="65"
                 :loading="i === 0 ? 'eager' : 'lazy'" :preload="i === 0" :fetchpriority="i === 0 ? 'high' : 'low'"
-                decoding="async" placeholder sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 25vw"
+                decoding="async" placeholder
                 class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
             <NuxtImg :src="product.hoverImage" alt="Product hover" width="600" height="750" format="webp" quality="65"
                 loading="lazy" decoding="async" placeholder
-                sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 25vw"
                 class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
             <span v-if="product.isNew"

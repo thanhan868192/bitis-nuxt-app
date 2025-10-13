@@ -6,9 +6,8 @@ defineProps<{ post: BlogPost }>()
 
 <template>
     <article class="group overflow-hidden bg-white shadow-sm ring-1 hover:shadow-md transition">
-        <NuxtImg :src="post.image" :alt="post.title" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            format="webp" loading="lazy" decoding="async" fetchpriority='low' placeholder
-            class="w-full aspect-[4/4] object-scale-down" />
+        <NuxtImg :src="post.image" :alt="post.title" format="webp" loading="lazy" decoding="async" fetchpriority='low'
+            placeholder class="w-full aspect-[4/4] object-scale-down" />
 
         <div class="p-4 md:p-5">
             <h3 class="text-base text-gray-900 md:text-lg font-semibold leading-snug ">
