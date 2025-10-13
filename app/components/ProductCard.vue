@@ -3,6 +3,7 @@ import type { Product } from '../../types/product'
 
 defineProps<{ product: Product, i: number }>()
 const VNDUnit = new Intl.NumberFormat('vi-VN')
+const formatVND = (v?: number) => (v == null ? '' : VNDUnit.format(v))
 </script>
 
 <template>
@@ -17,7 +18,7 @@ const VNDUnit = new Intl.NumberFormat('vi-VN')
                 loading="lazy" decoding="async" placeholder
                 class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-            <span v-if="product.isNew"
+            <span v-show="product.isNew"
                 class="absolute top-2 left-2 bg-green-600 text-white text-xs font-medium px-2 py-1 rounded">
                 Mới
             </span>
@@ -36,11 +37,11 @@ const VNDUnit = new Intl.NumberFormat('vi-VN')
 
             <div class="mt-2 flex flex-wrap justify-between">
                 <div class="flex gap-2 items-center ">
-                    <p class="price-item text-red-600 font-bold">{{ VNDUnit.format(product.price) }} ₫</p>
-                    <p v-if="product.oldPrice" class="text-gray-900 line-through text-sm">
-                        {{ VNDUnit.format(product.oldPrice) }} ₫
+                    <p class="price-item text-red-600 font-bold">{{ formatVND(product.price) }} ₫</p>
+                    <p v-show="product.oldPrice" class="text-gray-900 line-through text-sm">
+                        {{ formatVND(product.oldPrice) }} ₫
                     </p>
-                    <p v-if="product.discount" class="discount text-xs font-medium">
+                    <p v-show="product.discount" class="discount text-xs font-medium">
                         -{{ product.discount }}%
                     </p>
                 </div>

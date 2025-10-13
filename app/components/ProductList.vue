@@ -14,7 +14,7 @@ defineProps<{ productCategories: ProductCategory[] }>()
                 <ProductCard v-for="(product, pIndex) in category.products" :key="pIndex" :product="product"
                     :i="pIndex" />
             </div>
-            <div v-if="i !== productCategories.length - 1"
+            <div v-show="i !== productCategories.length - 1"
                 class="view-more-collection flex justify-center items-center mt-11">
                 <a href="#">CÒN NHIỀU LẮM, XEM THÊM</a>
             </div>
@@ -44,5 +44,18 @@ defineProps<{ productCategories: ProductCategory[] }>()
 .view-more-collection a:hover {
     background: #000;
     color: #fff;
+}
+
+@media (max-width: 640px) {
+    .section-heading-tab-new {
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .view-more-collection {
+        min-height: 48px;
+    }
 }
 </style>

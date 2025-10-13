@@ -14,11 +14,13 @@ const {
 } = useHeader();
 
 onMounted(() => {
-    if (window.matchMedia('(max-width: 991px)').matches) return;
-
     const header = document.getElementById('main-header')
 
     const handleScroll = () => {
+        if (window.matchMedia('(max-width: 991px)').matches) {
+            return header!.style.top = '0px'
+        }
+
         if (window.scrollY > 40) {
             header!.style.top = '0px'
         } else {
