@@ -34,5 +34,65 @@
     "name": "CH Bạch Đằng - Đà Nẵng",
     "address": "Bạch Đằng, Hải Châu, Đà Nẵng",
     "region": "DN"
+  },
+  {
+    "id": "7",
+    "name": "CH 68 Trần Quang Khải - Quận 1 - HCM",
+    "address": "68 Trần Quang Khải, P. Tân Định, Q.1, TP.HCM",
+    "region": "HCM"
+  },
+  {
+    "id": "8",
+    "name": "CH 123 Nguyễn Oanh - Gò Vấp - HCM",
+    "address": "123 Nguyễn Oanh, P.17, Q. Gò Vấp, TP.HCM",
+    "region": "HCM"
+  },
+  {
+    "id": "9",
+    "name": "CH 45 Lê Văn Việt - TP. Thủ Đức - HCM",
+    "address": "45 Lê Văn Việt, P. Hiệp Phú, TP. Thủ Đức, TP.HCM",
+    "region": "HCM"
+  },
+  {
+    "id": "10",
+    "name": "CH 120 Cầu Giấy - Cầu Giấy - Hà Nội",
+    "address": "120 Đường Cầu Giấy, Q. Cầu Giấy, Hà Nội",
+    "region": "HN"
+  },
+  {
+    "id": "11",
+    "name": "CH 89 Kim Mã - Ba Đình - Hà Nội",
+    "address": "89 Kim Mã, Q. Ba Đình, Hà Nội",
+    "region": "HN"
+  },
+  {
+    "id": "12",
+    "name": "CH 36 Nguyễn Văn Linh - Hải Châu - Đà Nẵng",
+    "address": "36 Nguyễn Văn Linh, Q. Hải Châu, Đà Nẵng",
+    "region": "DN"
+  },
+  {
+    "id": "13",
+    "name": "CH 27 Điện Biên Phủ - Thanh Khê - Đà Nẵng",
+    "address": "27 Điện Biên Phủ, Q. Thanh Khê, Đà Nẵng",
+    "region": "DN"
+  },
+  {
+    "id": "14",
+    "name": "CH 12 Lê Hồng Phong - Hải Phòng",
+    "address": "12 Lê Hồng Phong, Q. Ngô Quyền, Hải Phòng",
+    "region": "KHAC"
+  },
+  {
+    "id": "15",
+    "name": "CH 20 Trần Hưng Đạo - Nha Trang - Khánh Hòa",
+    "address": "20 Trần Hưng Đạo, TP. Nha Trang, Khánh Hòa",
+    "region": "KHAC"
+  },
+  {
+    "id": "16",
+    "name": "CH 18 Nguyễn Văn Tiết - Thủ Dầu Một - Bình Dương",
+    "address": "18 Nguyễn Văn Tiết, TP. Thủ Dầu Một, Bình Dương",
+    "region": "KHAC"
   }
 ]
