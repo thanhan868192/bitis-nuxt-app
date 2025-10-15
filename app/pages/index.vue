@@ -1,6 +1,15 @@
 <script setup lang="ts">
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
+import 'swiper/css'
+import 'swiper/css/navigation'
 import { useProduct } from '~/composables/useProduct';
-const { productCategories, productSliders } = useProduct()
+const { productCategories, productSliders, fetchProductCategories, fetchProductSliders } = await useProduct()
+
+onMounted(() => {
+    fetchProductCategories()
+    fetchProductSliders()
+})
 </script>
 
 <template>

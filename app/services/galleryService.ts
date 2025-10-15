@@ -1,8 +1,8 @@
-import galleryData from '../../data/galleries.json';
 import type { Gallery } from '../../types/gallery'
 
 export class GalleryService {
-    getGalleries(): Gallery[] {
-        return galleryData as Gallery[]
+    async getGalleries(): Promise<Gallery[]> {
+        const response = await fetch('/data/blogs.json')
+        return (await response.json()) as Gallery[]
     }
 }

@@ -45,6 +45,7 @@ export default defineNuxtConfig({
       'postcss-font-display': { display: 'swap' }
     }
   },
+  plugins: [],
   nitro: {
     routeRules: {
       '/_nuxt/**': {

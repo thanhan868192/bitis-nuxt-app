@@ -1,4 +1,4 @@
-import menuItems from '../../data/menu.json';
+import menuItems from '../../public/data/menu.json';
 import type { MenuItem } from '../../types/menu'
 
 export const useHeader = () => {

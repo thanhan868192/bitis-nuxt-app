@@ -2,14 +2,24 @@ import { useNuxtApp } from '#app'
 import { useState } from '#imports'
 import type { Gallery } from '../../types/gallery'
 
-export const useGallery = () => {
+export const useGallery = async () => {
     const { $galleryService, $loggerService } = useNuxtApp()
 
-    const galleries = useState<Gallery[]>('getGalleries', () => $galleryService.getGalleries())
+    const galleries = useState<Gallery[]>('getGalleries', () => [])
 
-    if (galleries.value) {
-        $loggerService.info('Get Galleries successfully', galleries.value)
+    const fetchGalleries = async () => {
+        try {
+            const data = await $galleryService.getGalleries()
+            galleries.value = data
+        } catch (error) {
+            $loggerService.error('Failed to get Galleries', error)
+        }
     }
+    watch(galleries, (newVal) => {
+        if (newVal && newVal.length) {
+            $loggerService.info('Get Galleries successfully', newVal)
+        }
+    })
 
-    return { galleries }
+    return { galleries, fetchGalleries }
 }

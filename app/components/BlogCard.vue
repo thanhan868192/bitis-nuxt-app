@@ -6,7 +6,7 @@ defineProps<{ post: BlogPost }>()
 
 <template>
     <article class="group overflow-hidden bg-white shadow-sm ring-1 hover:shadow-md transition">
-        <NuxtImg :src="post.image" :alt="post.title" format="webp" loading="lazy" decoding="async" fetchpriority='low'
+        <NuxtImg :src="post.image" :alt="post.alt" format="webp" loading="lazy" decoding="async" fetchpriority='low'
             placeholder class="w-full aspect-[4/4] object-scale-down" />
 
         <div class="p-4 md:p-5">

@@ -2,14 +2,28 @@ import { useNuxtApp } from '#app'
 import { useState } from '#imports'
 import type { BlogPost } from '../../types/blog-post'
 
-export const useBlog = () => {
+export const useBlog = async () => {
     const { $blogServices, $loggerService } = useNuxtApp()
 
-    const blogs = useState<BlogPost[]>('getBlogs', () => $blogServices.getBlogs())
+    const blogs = useState<BlogPost[]>('getBlogs', () => [])
 
-    if (blogs.value) {
-        $loggerService.info('Get Blogs successfully', blogs.value)
+    const fetchBlogs = async () => {
+        try {
+            const data = await $blogServices.getBlogs()
+            blogs.value = data
+        } catch (error) {
+            $loggerService.error('Failed to get blogs', error)
+        }
     }
 
-    return { blogs }
+    watch(blogs, (newVal) => {
+        if (newVal && newVal.length) {
+            $loggerService.info('Get Blogs successfully', newVal)
+        }
+    })
+
+    return {
+        blogs,
+        fetchBlogs
+    }
 }

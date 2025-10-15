@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { useStoreLocator } from '~/composables/useStoreLocator';
 
-const { regions, region, filtered } = useStoreLocator()
+const { regions, region, filtered, fetchStoreLocators } = await useStoreLocator()
 
+onMounted(() => {
+    fetchStoreLocators()
+})
 </script>
 
 <template>

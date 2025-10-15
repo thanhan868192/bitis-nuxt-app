@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { useSwiper } from '~/composables/useSwiper';
 import type { ProductSlider } from '../../types/product';

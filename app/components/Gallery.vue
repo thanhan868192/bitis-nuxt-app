@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { useGallery } from '~/composables/useGallery';
 
-const { galleries } = useGallery()
+const { galleries, fetchGalleries } = await useGallery()
+
+onMounted(() => {
+    fetchGalleries()
+})
 </script>
 
 <template>

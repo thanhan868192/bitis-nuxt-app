@@ -1,8 +1,7 @@
-import storeLocatorData from '../../data/store-locator.json'
 import type { Store } from '../../types/store'
-
 export class StoreLocatorService {
-    getStoreLocators(): Store[] {
-        return storeLocatorData as Store[]
+    async getStoreLocators(): Promise<Store[]> {
+        const response = await fetch('/data/store-locator.json')
+        return (await response.json()) as Store[]
     }
 }

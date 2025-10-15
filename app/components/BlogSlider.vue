@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import 'swiper/css'
-import 'swiper/css/navigation'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { useBlog } from '~/composables/useBlog'
 import { useSwiper } from '~/composables/useSwiper'
 
-const { blogs } = useBlog()
 const { modules, breakpoints } = useSwiper()
+const { blogs, fetchBlogs } = await useBlog()
+
+onMounted(() => {
+    fetchBlogs()
+})
 </script>
 
 <template>
